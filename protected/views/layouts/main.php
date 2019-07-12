@@ -4,6 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- blueprint CSS framework -->
 <!--	<link rel="stylesheet" type="text/css" href="--><?php //echo Yii::app()->request->baseUrl; ?><!--/css/screen.css" media="screen, projection">-->
@@ -52,7 +54,7 @@
                 left block
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-9" style="border: 1px solid gray">
-               <div class="container container-custom">
+               <div class="container col-lg-12 col-xs-12 col-md-12 container-custom">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-block-height text-center" style="border: 1px solid gray">
                         center block with padding
                     </div>

@@ -3,7 +3,7 @@
 
 # phpstorm project files
 .idea
-assets
+#assets
 
 # netbeans project files
 #nbproject

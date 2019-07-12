@@ -1,0 +1,9 @@
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.height_div {
+    height: 15rem;
+    background-color: #4F81BD;
+}

@@ -24,77 +24,49 @@
 <body>
 
 <div class="wrap"> <!--id="page"-->
-    <div class="container col-md-12" style="border: 1px solid gray">
+    <div class="container col-md-12 col-xs-12 col-md-12 col-lg-12">
         <div class="row">
-            <div class="cold-md-12 text-right" id="mainmenu">
-                <?php $this->widget('zii.widgets.CMenu',array(
-                    'items'=>array(
-                        array('label'=>'Widget', 'url'=>array('/site/widget')),
+            <div class="col-md-12" style="border: 1px solid gray">
+                <div class="row">
+                    <div class="cold-md-12 text-right" id="mainmenu">
+                        <?php $this->widget('zii.widgets.CMenu',array(
+                            'items'=>array(
+                                array('label'=>'Widget', 'url'=>array('/site/widget')),
 //				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 //				array('label'=>'Contact', 'url'=>array('/site/contact')),
-                        array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                        array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-                    ),
-                )); ?>
-            </div>
-        </div>
-    </div>
-    <div class="container col-md-12">
-        <div class="row height_div text-center">
-            <div class="col-md-12">
-                top block
-            </div>
-        </div>
-    </div>
-    <div class="container col-md-4" style="border: 1px solid gray">
-        <div class="row">
-        </div>
-        <div class="row" style="border: 1px solid gray">
-            <div class="col-md-12 height_div">
-                left
-            </div>
-        </div>
-    </div>
-    <div class="container col-md-4" style="border: 1px solid gray">
-        <div class="row">
-            <div class="col-md-12 height_div">
-                center
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <?php echo $content; ?>
-            </div>
-        </div>
-    </div>
-    <div class="hidden-xs">
-        <div class="container col-md-4 " style="border: 1px solid gray">
-            <div class="row">
-                <div class="col-md-12 height_div">
-                    right 2
+                                array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                                array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                            ),
+                        )); ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <!--<div class="container">
-            <div class="container">
-                <div class="cold-md-12" id="mainmenu">
-                    <?php /*$this->widget('zii.widgets.CMenu',array(
-                        'items'=>array(
-                            array('label'=>'Widget', 'url'=>array('/site/widget')),
-//				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-//				array('label'=>'Contact', 'url'=>array('/site/contact')),
-                            array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                            array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-                        ),
-                    )); */?>
-
-                </div><!-- mainmenu -->
+        <div class="row height_div text-center top-block-height">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                top block
             </div>
-        <?php /*echo $content; */?>
-<!--    </div>-->
+        </div>
+        <div class="row equal">
+            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 height_div" style="border: 1px solid gray">
+                left block
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-9" style="border: 1px solid gray">
+               <div class="container container-custom">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-block-height text-center" style="border: 1px solid gray">
+                        center block with padding
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #fff!important;">
+                        <?= $content; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-3 hidden-xs height_div" style="border: 1px solid gray">
+                right block
+            </div>
+        </div>
+    </div>
+</div>
 
 	<?php /*if(isset($this->breadcrumbs)):*/?><!--
 		<?php /*$this->widget('zii.widgets.CBreadcrumbs', array(

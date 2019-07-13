@@ -128,8 +128,10 @@ body {
     cursor: pointer;
 }
 
+table#widget-table tr span.show-actions {
+    opacity: 0;
+}
 
-/*.people-info tr td{
-    line-height: 0.5;
-}*/
-
+table#widget-table tr:hover span.show-actions {
+    opacity: 1;
+}

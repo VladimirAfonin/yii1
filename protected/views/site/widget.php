@@ -21,7 +21,7 @@ $this->pageTitle=Yii::app()->name;
     should you have any questions.</p>-->
 
 <div class="people-info">
-    <table class="table table-striped people-info">
+    <table class="table table-striped people-info" id="widget-table">
         <thead>
         <tr class="tr-head">
             <td colspan="3">
@@ -86,9 +86,9 @@ $this->pageTitle=Yii::app()->name;
                 <td class="col-md-1">
                     <div class="icons icons-view">
                         <div class="action-icons">
-                            <span data-toggle="tooltip" title="Save" class="fa fa-save hidden "></span>
+                            <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
                             <span class="fa fa-close hidden " title="Cancel #90"></span>
-                            <span class="fa fa-info-circle" title="Info"></span>
+                            <span class="fa fa-info-circle show-actions" title="Info"></span>
                         </div>
                     </div>
                 </td>
@@ -118,11 +118,11 @@ $this->pageTitle=Yii::app()->name;
                 <td class="col-md-1">
                     <div class="icons icons-view">
                         <div class="action-icons">
-                            <span class="fa fa-edit" title="Edit"></span>
-                            <span data-toggle="tooltip" title="Save" class="fa fa-save hidden "></span>
-                            <span data-toggle="tooltip" title="Delete" class="fa fa-trash"></span><br>
+                            <span class="fa fa-edit show-actions" title="Edit"></span>
+                            <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
+                            <span data-toggle="tooltip" title="Delete" class="fa fa-trash show-actions"></span><br>
                             <span class="fa fa-close hidden " title="Cancel #90"></span>
-                            <span class="fa fa-info-circle" title="Info"></span>
+                            <span class="fa fa-info-circle  show-actions" title="Info"></span>
                         </div>
                     </div>
                 </td>
@@ -143,7 +143,7 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-info-circle" title="Info"></span>
+                        <span class="fa fa-info-circle  show-actions" title="Info"></span>
                     </div>
                 </div>
             </td>
@@ -245,10 +245,10 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-edit" title="Edit"></span>
-                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden "></span>
+                        <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
                         <span class="fa fa-close hidden " title="Cancel #90"></span>
-                        <span class="fa fa-info-circle" title="Info"></span>
+                        <span class="fa fa-info-circle  show-actions" title="Info"></span>
                     </div>
                 </div>
             </td>
@@ -285,10 +285,10 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-edit" title="Edit"></span>
-                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden "></span>
+                        <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
                         <span class="fa fa-close hidden " title="Cancel #90"></span>
-                        <span class="fa fa-info-circle" title="Info"></span>
+                        <span class="fa fa-info-circle show-actions" title="Info"></span>
                     </div>
                 </div>
             </td>
@@ -330,11 +330,11 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-edit" title="Edit"></span>
-                        <span data-toggle="tooltip" title="Delete" class="fa fa-trash"></span><br>
-                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden "></span>
+                        <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <span data-toggle="tooltip" title="Delete" class="fa fa-trash show-actions"></span><br>
+                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
                         <span class="fa fa-close hidden " title="Cancel #90"></span>
-                        <span class="fa fa-info-circle" title="Info"></span>
+                        <span class="fa fa-info-circle show-actions" title="Info"></span>
                     </div>
                 </div>
             </td>
@@ -364,9 +364,9 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-edit" title="Edit"></span>
+                        <span class="fa fa-edit show-actions" title="Edit"></span>
                         <span class="fa fa-close hidden " title="Cancel #90"></span>
-                        <span class="fa fa-info-circle" title="Info"></span>
+                        <span class="fa fa-info-circle show-actions" title="Info"></span>
                     </div>
                 </div>
             </td>

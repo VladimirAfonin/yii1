@@ -47,37 +47,40 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <div class="col-md-6">
-                                <div class="middlename">
-                                    <div class="middlename-view">
-                                        <span id="middlename-1">123</span>
-                                        <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                        <span class="fa fa-edit"></span>
-                                    </div>
-                                    <div class="middle-edit">
-                                        <input class="form-control form-control-custom required" maxlength="25" placeholder="middle name" type="text" value="123">
-                                        <span class="danger" id="m-name-error">Middle Name cannot be left blank</span>
+                            <div class="w-100">
+                                <div class="col-md-6 nopadding">
+                                    <div class="middlename">
+                                        <div class="middlename-view">
+                                            <span id="middlename-1">123</span>
+                                            <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
+                                            <span class="fa fa-edit"></span>
+                                        </div>
+                                        <div class="middle-edit">
+                                            <input class="form-control form-control-custom required" maxlength="25" placeholder="middle name" type="text" value="123">
+                                            <span class="danger" id="m-name-error">Middle Name cannot be left blank</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="lastname">
-                                    <div class="lastname-view">
-                                        <span id="lastname-1">Bala kumar.</span>
-                                        <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                        <span class="fa fa-edit"></span>
-                                    </div>
-                                    <div class="lastname-edit">
-                                        <input class="form-control form-control-custom required" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
-                                        <span class="danger" id="l-name-error">Last Name cannot be left blank</span>
+                                <div class="col-md-6 nopadding">
+                                    <div class="lastname">
+                                        <div class="lastname-view">
+                                            <span id="lastname-1">Bala kumar.</span>
+                                            <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
+                                            <span class="fa fa-edit"></span>
+                                        </div>
+                                        <div class="lastname-edit">
+                                            <input class="form-control form-control-custom required" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
+                                            <span class="danger" id="l-name-error">Last Name cannot be left blank</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
+
                         </div>
-                        <div class="col-md-12">
+<!--                        <div class="col-md-12">-->
                             <span class="tooltip-custom tooltip-info">You can display your names differently to different users. #71</span>
-                        </div>
+<!--                        </div>-->
                     </div>
                 </td>
                 <td class="col-md-1">
@@ -97,7 +100,7 @@ $this->pageTitle=Yii::app()->name;
                             <label for="">Nick Name</label>
                         </div>
                         <div class="col-md-8">
-                            <div class="col-md-12">
+                            <div class="col-md-12 nopadding">
                                 <div class="nickname-view">
                                     <span id="nickname-1">xyz</span>
                                     <span class="icons fa fa-lock" style="color: #3b5998;"></span>
@@ -161,15 +164,15 @@ $this->pageTitle=Yii::app()->name;
                                 <span id="b-date-1">29</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
-                            <div class="col-md-3">
+                            <div class="p-0 col-md-3">
                                 <span id="b-year-1">1990</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
                         </div>
                         <div class="birth-edit">
                             <div class="row">
-                                <div class="col-md-6">
-                                    <select class="form-control form-control-custom form-control-select" name="month" id="month">
+                                <div class="col-md-6 margin-select">
+                                    <select class="form-control padding-select form-control-custom form-control-select" name="month" id="month">
                                         <option value>Month</option>
                                         <option value="1">January</option>
                                         <option value="2">February</option>
@@ -185,7 +188,7 @@ $this->pageTitle=Yii::app()->name;
                                         <option value="12">December</option>
                                     </select>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 margin-select">
                                     <select class="form-control form-control-custom form-control-select" name="day" id="day">
                                         <option value="">Day</option>
                                         <option value="1">01</option>
@@ -221,7 +224,7 @@ $this->pageTitle=Yii::app()->name;
                                         <option value="31">31</option>
                                     </select>
                                 </div>
-                                <div class="col-md-3 pl-0">
+                                <div class="col-md-3 pl-0 margin-select">
                                     <select id="year" class="form-control form-control-custom form-control-select" name="year">
                                         <option value="">Year</option>
                                         <?php for($i = 2004; $i >= 1920; $i--): ?>

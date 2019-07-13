@@ -59,7 +59,6 @@
     font-size: 13px!important;
     line-height: normal!important;
     border-radius: 0!important;
-    border-radius: 0!important;
 }
 
 .form-control-select {
@@ -67,7 +66,7 @@
     line-height: normal!important;
     height: 25px!important;
     border-radius: 0!important;
-    width: 60%!important;
+    width: 75%!important;
     padding: 0!important;
 }
 
@@ -78,6 +77,28 @@
 .p-0 {
     padding: 0!important;
 }
+
+@media(max-width: 1010px) {
+    .margin-select {
+        margin-bottom: 5px!important;
+    }
+    .nopadding {
+        padding: 0!important;
+    }
+
+    .p-0 {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .pl-0 {
+        padding-left: 15px!important;
+    }
+
+}
+
+/*.middle-screen-padding-left {
+    padding: ;
+}*/
 
 .tooltip-custom {
     color: #31708f;

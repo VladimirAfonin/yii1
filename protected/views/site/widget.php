@@ -145,12 +145,12 @@ $this->pageTitle=Yii::app()->name;
                     <div class="icons icons-view">
                         <div class="action-icons">
                             <?php if(!$guest): ?>
-                                <span class="fa fa-edit show-actions" title="Edit"></span>
-                                <span data-toggle="tooltip" title="Delete" class="fa fa-trash show-actions"></span>
-                                <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
+                                <span class="fa fa-edit show-actions" id="nickname-edit" title="Edit"></span>
+                                <span data-toggle="tooltip" title="Delete" id="nickname-trash" class="fa fa-trash show-actions"></span>
+                                <span data-toggle="tooltip" title="Save" class="fa fa-save hidden" id="nickname-save"></span>
                             <?php endif; ?>
-                            <span class="fa fa-close hidden " title="Cancel #90"></span>
-                            <span class="fa fa-info-circle  show-actions" title="Info"></span>
+                            <span class="fa fa-close hidden show-actions" id="nickname-close" title="Cancel #90"></span>
+                            <span class="fa fa-info-circle  show-actions" id="nickname-info" title="Info"></span>
                         </div>
                     </div>
                 </td>
@@ -295,7 +295,7 @@ $this->pageTitle=Yii::app()->name;
                     </div>
                     <div class="col-md-8">
                         <div class="aboutme-view">
-                            <span id="aboutme-1">July</span>
+                            <span id="aboutme-1">This is all about how great I am at this site.....</span>
                             <span class="icons fa fa-lock privacy_icon"></span>
                         </div>
                         <div class="aboutme-edit hidden">
@@ -371,12 +371,12 @@ $this->pageTitle=Yii::app()->name;
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
-                        <span class="fa fa-edit show-actions" title="Edit"></span>
-                        <span data-toggle="tooltip" title="Delete" class="fa fa-trash show-actions"></span>
+                        <span class="fa fa-edit show-actions" id="relation-edit" title="Edit"></span>
+                        <span data-toggle="tooltip" title="Delete" id="relation-trash" class="fa fa-trash show-actions"></span>
                         <?php endif; ?>
-                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
-                        <span class="fa fa-close hidden " title="Cancel #90"></span>
-                        <span class="fa fa-info-circle show-actions" title="Info"></span>
+                        <span data-toggle="tooltip" title="Save" id="relation-save" class="fa fa-save hidden"></span>
+                        <span class="fa fa-close hidden " id="relation-close" title="Cancel #90"></span>
+                        <span class="fa fa-info-circle show-actions" id="relation-info" title="Info"></span>
                     </div>
                 </div>
             </td>

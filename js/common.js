@@ -38,6 +38,30 @@ $.ajax({
     },
 });
 
+// nickname
+$('#nickname-edit').on('click', function(e){
+    $('#nickname-info, #nickname-edit').addClass('hidden');
+    $('.nickname-edit, #nickname-save, #nickname-close').removeClass('hidden');
+    $('#nickname-trash, #nickname-close').css('opacity', 1);
+});
+$('#nickname-close').on('click', function(e){
+    $('.nickname-edit, #nickname-close, #nickname-save').addClass('hidden');
+    $('#nickname-edit, #nickname-info').removeClass('hidden');
+    $('#nickname-trash').css('opacity', 0);
+});
+
+// relation status
+$('#relation-edit').on('click', function(e){
+    $('#relation-info, #relation-edit').addClass('hidden');
+    $('.relation-edit, #relation-save, #relation-close').removeClass('hidden');
+    $('#relation-trash, #relation-close').css('opacity', 1);
+});
+$('#relation-close').on('click', function(e){
+    $('.relation-edit, #relation-close, #relation-save').addClass('hidden');
+    $('#relation-edit, #relation-info').removeClass('hidden');
+    $('#relation-trash').css('opacity', 0);
+});
+
 /*$(document).on('mouseover', 'tr', function(e) {
     var _this = $(this);
     // var el = _this.find('.icons-view'); // .replaceClass('hidden', 'visible');

@@ -5,7 +5,7 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <!--<h1>Welcome to <i>--><?php //echo CHtml::encode(Yii::app()->name); ?><!--</i></h1>-->
-<h3><?= var_dump($test = Yii::app()->user->isGuest) ?></h3>
+<h3><?= var_dump($guest = Yii::app()->user->isGuest) ?></h3>
 
 <!--<p>Congratulations! You have successfully created your Yii application.</p>
 
@@ -36,7 +36,9 @@ $this->pageTitle=Yii::app()->name;
                         <div class="col-md-4">
                             <div class="firstname">
                                 <div class="firstname-view">
-                                    <span id="firstname-1">Bala</span>
+                                    <span id="firstname-1">
+                                        Restricted
+                                    </span>
                                     <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
                                     <span class="fa fa-edit"></span>
                                 </div>
@@ -51,7 +53,15 @@ $this->pageTitle=Yii::app()->name;
                                 <div class="col-md-6 nopadding">
                                     <div class="middlename">
                                         <div class="middlename-view">
-                                            <span id="middlename-1">123</span>
+                                            <?php if($guest) : ?>
+                                                <span id="middlename-restrict" class="danger">
+                                                Restricted
+                                            </span>
+                                            <?php else: ?>
+                                                <span id="middlename-1">
+                                                    Restricted
+                                                </span>
+                                            <?php endif; ?>
                                             <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
                                             <span class="fa fa-edit"></span>
                                         </div>
@@ -64,7 +74,15 @@ $this->pageTitle=Yii::app()->name;
                                 <div class="col-md-6 nopadding">
                                     <div class="lastname">
                                         <div class="lastname-view">
-                                            <span id="lastname-1">Bala kumar.</span>
+                                            <?php if($guest) : ?>
+                                                <span id="lastname-restrict" class="danger">
+                                                Restricted
+                                            </span>
+                                            <?php else: ?>
+                                                <span id="lastname-1">
+                                                    Restricted
+                                                </span>
+                                            <?php endif; ?>
                                             <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
                                             <span class="fa fa-edit"></span>
                                         </div>
@@ -102,7 +120,15 @@ $this->pageTitle=Yii::app()->name;
                         <div class="col-md-8">
                             <div class="col-md-12 nopadding">
                                 <div class="nickname-view">
-                                    <span id="nickname-1">xyz</span>
+                                    <?php if($guest) : ?>
+                                    <span id="nickname-restrict" class="danger">
+                                        Restricted
+                                    </span>
+                                    <?php else: ?>
+                                    <span id="nickname-1">
+                                        Restricted
+                                    </span>
+                                    <?php endif; ?>
                                     <span class="icons fa fa-lock" style="color: #3b5998;"></span>
                                 </div>
                                 <div class="nickname-edit hidden">
@@ -118,9 +144,11 @@ $this->pageTitle=Yii::app()->name;
                 <td class="col-md-1">
                     <div class="icons icons-view">
                         <div class="action-icons">
-                            <span class="fa fa-edit show-actions" title="Edit"></span>
-                            <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
-                            <span data-toggle="tooltip" title="Delete" class="fa fa-trash show-actions"></span><br>
+                            <?php if(!$guest): ?>
+                                <span class="fa fa-edit show-actions" title="Edit"></span>
+                                <span data-toggle="tooltip" title="Delete" class="fa fa-trash show-actions"></span>
+                                <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
+                            <?php endif; ?>
                             <span class="fa fa-close hidden " title="Cancel #90"></span>
                             <span class="fa fa-info-circle  show-actions" title="Info"></span>
                         </div>
@@ -157,15 +185,19 @@ $this->pageTitle=Yii::app()->name;
                     <div class="col-sm-8">
                         <div class="birth-view">
                             <div class="col-md-6">
-                                <span id="b-month-1">July</span>
+                                <?php if($guest): ?>
+                                    <span id="b-month-1-restricted" class="danger">Restricted</span>
+                                <?php else: ?>
+                                    <span id="b-month-1">July</span>
+                                <?php endif;?>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
                             <div class="col-md-3">
-                                <span id="b-date-1">29</span>
+                                <span id="b-date-1">July</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
                             <div class="p-0 col-md-3">
-                                <span id="b-year-1">1990</span>
+                                <span id="b-year-1">July</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
                         </div>
@@ -245,7 +277,9 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <?php if(!$guest): ?>
+                            <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <?php endif;?>
                         <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
                         <span class="fa fa-close hidden " title="Cancel #90"></span>
                         <span class="fa fa-info-circle  show-actions" title="Info"></span>
@@ -261,7 +295,7 @@ $this->pageTitle=Yii::app()->name;
                     </div>
                     <div class="col-md-8">
                         <div class="aboutme-view">
-                            <span id="aboutme-1">This is all about how great I am at this site.....</span>
+                            <span id="aboutme-1">July</span>
                             <span class="icons fa fa-lock privacy_icon"></span>
                         </div>
                         <div class="aboutme-edit hidden">
@@ -285,7 +319,9 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <?php if(!$guest): ?>
+                            <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <?php endif; ?>
                         <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
                         <span class="fa fa-close hidden " title="Cancel #90"></span>
                         <span class="fa fa-info-circle show-actions" title="Info"></span>
@@ -301,7 +337,11 @@ $this->pageTitle=Yii::app()->name;
                     </div>
                     <div class="col-md-8">
                         <div class="relation-view">
-                            <span id="relation-1">Divorced</span>
+                            <?php if($guest): ?>
+                                <span id="relation-1-restricted" class="danger">Restricted</span>
+                            <?php else: ?>
+                                <span id="relation-1">July</span>
+                            <?php endif;?>
                             <span class="icons fa fa-lock" style="color: #3b5998;"></span>
                         </div>
                         <div class="relation-edit hidden">
@@ -330,8 +370,10 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
+                        <?php if(!$guest): ?>
                         <span class="fa fa-edit show-actions" title="Edit"></span>
-                        <span data-toggle="tooltip" title="Delete" class="fa fa-trash show-actions"></span><br>
+                        <span data-toggle="tooltip" title="Delete" class="fa fa-trash show-actions"></span>
+                        <?php endif; ?>
                         <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
                         <span class="fa fa-close hidden " title="Cancel #90"></span>
                         <span class="fa fa-info-circle show-actions" title="Info"></span>
@@ -347,7 +389,11 @@ $this->pageTitle=Yii::app()->name;
                     </div>
                     <div class="col-md-8">
                         <div class="keywords-view">
-                            <span id="keywords">Keywords</span>
+                            <?php if($guest): ?>
+                                <span id="keywords-restricted" class="danger">Restricted</span>
+                            <?php else: ?>
+                                <span id="keywords">July</span>
+                            <?php endif;?>
                         </div>
                         <div class="keywords-edit hidden">
                             <div>
@@ -364,7 +410,9 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <?php if(!$guest): ?>
+                            <span class="fa fa-edit show-actions" title="Edit"></span>
+                        <?php endif; ?>
                         <span class="fa fa-close hidden " title="Cancel #90"></span>
                         <span class="fa fa-info-circle show-actions" title="Info"></span>
                     </div>

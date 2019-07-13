@@ -86,12 +86,15 @@ body {
     padding: 0!important;
 }
 
+@media(min-width: 300px){
+    .nopadding {
+        padding: 0!important;
+    }
+}
+
 @media(max-width: 1010px) {
     .margin-select {
         margin-bottom: 5px!important;
-    }
-    .nopadding {
-        padding: 0!important;
     }
 
     .p-0 {
@@ -101,8 +104,9 @@ body {
     .pl-0 {
         padding-left: 15px!important;
     }
-
 }
+
+
 
 /*.middle-screen-padding-left {
     padding: ;

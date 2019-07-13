@@ -182,9 +182,9 @@ $this->pageTitle=Yii::app()->name;
                     <div class="col-sm-4">
                         <label for="">Date of Birth</label>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 text-right">
                         <div class="birth-view">
-                            <div class="col-md-6">
+                            <div class="col-md-6 nopadding">
                                 <?php if($guest): ?>
                                     <span id="b-month-1-restricted" class="danger">Restricted</span>
                                 <?php else: ?>
@@ -192,11 +192,11 @@ $this->pageTitle=Yii::app()->name;
                                 <?php endif;?>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 nopadding">
                                 <span id="b-date-1">July</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
-                            <div class="p-0 col-md-3">
+                            <div class="col-md-3 nopadding">
                                 <span id="b-year-1">July</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>

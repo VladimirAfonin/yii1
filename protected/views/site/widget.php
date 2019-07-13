@@ -278,11 +278,11 @@ $this->pageTitle=Yii::app()->name;
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
-                            <span class="fa fa-edit show-actions" title="Edit"></span>
+                            <span class="fa fa-edit show-actions" id="birth-edit" title="Edit"></span>
                         <?php endif;?>
-                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
-                        <span class="fa fa-close hidden " title="Cancel #90"></span>
-                        <span class="fa fa-info-circle  show-actions" title="Info"></span>
+                        <span data-toggle="tooltip" title="Save" id="birth-save" class="fa fa-save hidden"></span>
+                        <span class="fa fa-close hidden " id="birth-close" title="Cancel #90"></span>
+                        <span class="fa fa-info-circle  show-actions" id="birth-info" title="Info"></span>
                     </div>
                 </div>
             </td>
@@ -300,7 +300,7 @@ $this->pageTitle=Yii::app()->name;
                         </div>
                         <div class="aboutme-edit hidden">
                             <textarea class="form-control form-control-textarea required"
-                                      maxlength="200" name="aboutme" id="aboutme-edit"
+                                      maxlength="200" name="aboutme"
                                       placeholder="Comments max 200 characters"
                                       rows="5"
                             >This is all about how great I am at this site....
@@ -320,11 +320,11 @@ $this->pageTitle=Yii::app()->name;
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
-                            <span class="fa fa-edit show-actions" title="Edit"></span>
+                            <span class="fa fa-edit show-actions" id="aboutme-edit" title="Edit"></span>
                         <?php endif; ?>
-                        <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
-                        <span class="fa fa-close hidden " title="Cancel #90"></span>
-                        <span class="fa fa-info-circle show-actions" title="Info"></span>
+                        <span data-toggle="tooltip" title="Save" id="aboutme-save" class="fa fa-save hidden"></span>
+                        <span class="fa fa-close hidden " id="aboutme-close" title="Cancel #90"></span>
+                        <span class="fa fa-info-circle show-actions" id="aboutme-info" title="Info"></span>
                     </div>
                 </div>
             </td>
@@ -411,10 +411,10 @@ $this->pageTitle=Yii::app()->name;
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
-                            <span class="fa fa-edit show-actions" title="Edit"></span>
+                            <span class="fa fa-edit show-actions" id="keywords-edit" title="Edit"></span>
                         <?php endif; ?>
-                        <span class="fa fa-close hidden " title="Cancel #90"></span>
-                        <span class="fa fa-info-circle show-actions" title="Info"></span>
+                        <span class="fa fa-close hidden " id="keywords-close" title="Cancel #90"></span>
+                        <span class="fa fa-info-circle show-actions" id="keywords-info" title="Info"></span>
                     </div>
                 </div>
             </td>

@@ -40,11 +40,14 @@ $.ajax({
 
 // nickname
 $('#nickname-edit').on('click', function(e){
+    $('.active').trigger('click');
+    $('#nickname-close').addClass('active');
     $('#nickname-info, #nickname-edit').addClass('hidden');
     $('.nickname-edit, #nickname-save, #nickname-close').removeClass('hidden');
     $('#nickname-trash, #nickname-close').css('opacity', 1);
 });
 $('#nickname-close').on('click', function(e){
+    $('#nickname-close').removeClass('active');
     $('.nickname-edit, #nickname-close, #nickname-save').addClass('hidden');
     $('#nickname-edit, #nickname-info').removeClass('hidden');
     $('#nickname-trash').css('opacity', 0);
@@ -52,15 +55,58 @@ $('#nickname-close').on('click', function(e){
 
 // relation status
 $('#relation-edit').on('click', function(e){
+    $('.active').trigger('click');
+    $('#relation-close').addClass('active');
     $('#relation-info, #relation-edit').addClass('hidden');
     $('.relation-edit, #relation-save, #relation-close').removeClass('hidden');
     $('#relation-trash, #relation-close').css('opacity', 1);
 });
 $('#relation-close').on('click', function(e){
+    $('#relation-close').removeClass('active');
     $('.relation-edit, #relation-close, #relation-save').addClass('hidden');
     $('#relation-edit, #relation-info').removeClass('hidden');
     $('#relation-trash').css('opacity', 0);
 });
+
+// date of birth
+$('#birth-edit').on('click', function(e){
+    $('.active').trigger('click');
+    $('#birth-close').addClass('active').css('opacity', 1);;
+    $('#birth-info, #birth-edit').addClass('hidden');
+    $('.birth-edit, #birth-save, #birth-close').removeClass('hidden');
+});
+$('#birth-close').on('click', function(e){
+    $('#birth-close').removeClass('active');
+    $('.birth-edit, #birth-close, #birth-save').addClass('hidden');
+    $('#birth-edit, #birth-info').removeClass('hidden');
+});
+
+// about me
+$('#aboutme-edit').on('click', function(e){
+    $('.active').trigger('click');
+    $('#aboutme-close').addClass('active').css('opacity', 1);;
+    $('#aboutme-info, #aboutme-edit').addClass('hidden');
+    $('.aboutme-edit, #aboutme-save, #aboutme-close').removeClass('hidden');
+});
+$('#aboutme-close').on('click', function(e){
+    $('#aboutme-close').removeClass('active');
+    $('.aboutme-edit, #aboutme-close, #aboutme-save').addClass('hidden');
+    $('#aboutme-edit, #aboutme-info').removeClass('hidden');
+});
+
+// keywords
+$('#keywords-edit').on('click', function(e){
+    $('.active').trigger('click');
+    $('#keywords-close').addClass('active').css('opacity', 1);
+    $('#keywords-info, #keywords-edit').addClass('hidden');
+    $('.keywords-edit, #keywords-save, #keywords-close').removeClass('hidden');
+});
+$('#keywords-close').on('click', function(e){
+    $('#keywords-close').removeClass('active');
+    $('.keywords-edit, #keywords-close, #keywords-save').addClass('hidden');
+    $('#keywords-edit, #keywords-info').removeClass('hidden');
+});
+
 
 /*$(document).on('mouseover', 'tr', function(e) {
     var _this = $(this);

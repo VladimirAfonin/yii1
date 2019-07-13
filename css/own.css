@@ -1,3 +1,11 @@
+
+body {
+    color: #676a6d!important;
+    font-family: "Source Sans Pro", sans-serif!important;
+    font-size: 13px!important;
+    line-height: inherit!important;
+}
+
 .row-flex {
     display: flex;
     flex-flow: row wrap;
@@ -119,6 +127,8 @@
 .action-icons span{
     cursor: pointer;
 }
+
+
 /*.people-info tr td{
     line-height: 0.5;
 }*/

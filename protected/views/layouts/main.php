@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -50,11 +50,11 @@
             </div>
         </div>
         <div class="row equal">
-            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 height_div" style="border: 1px solid gray">
+            <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs height_div" style="border: 1px solid gray">
                 left block
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-9" style="border: 1px solid gray">
-               <div class="container col-lg-12 col-xs-12 col-md-12 container-custom">
+            <div class="p-0 w-100 col-lg-6 col-md-6 col-sm-6 col-xs-12" style="border: 1px solid gray;">
+               <div class=" col-lg-12 col-xs-12 col-md-12 container-custom">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-block-height text-center" style="border: 1px solid gray">
                         center block with padding
                     </div>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-3 hidden-xs height_div" style="border: 1px solid gray">
+            <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs height_div" style="border: 1px solid gray">
                 right block
             </div>
         </div>
@@ -92,5 +92,6 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous"></script>
+<script type="text/javascript" src="<?= Yii::app()->request->baseUrl; ?>/js/common.js"></script>
 </body>
 </html>

@@ -31,3 +31,74 @@
     padding: 0!important;
 }
 
+.tr-head {
+    background: #4267b2;
+    color: #fff;
+}
+
+.head-txt {
+    font-size: 14px;
+    color: #fff;
+}
+.fa-edit, .fa-lock, .fa-save, .fa-info-circle {
+    cursor: pointer;
+    color: #4267b2;
+}
+.danger {
+    color: red;
+    font-size: 13px;
+}
+.form-control-custom {
+    font-size: 13px!important;
+    line-height: normal!important;
+    height: 25px!important;
+    border-radius: 0!important;
+}
+
+.form-control-textarea {
+    font-size: 13px!important;
+    line-height: normal!important;
+    border-radius: 0!important;
+    border-radius: 0!important;
+}
+
+.form-control-select {
+    font-size: 12px!important;
+    line-height: normal!important;
+    height: 25px!important;
+    border-radius: 0!important;
+    width: 60%!important;
+    padding: 0!important;
+}
+
+.pl-0 {
+    padding-left: 0!important;
+}
+
+.p-0 {
+    padding: 0!important;
+}
+
+.tooltip-custom {
+    color: #31708f;
+    font-weight: 600;
+    font-style: italic;
+}
+.tooltip-info {
+    font-size: 12px;
+}
+
+.icons-view {
+    opacity: 1;
+}
+.fa-close, .fa-trash {
+    color: red;
+}
+
+.action-icons span{
+    cursor: pointer;
+}
+/*.people-info tr td{
+    line-height: 0.5;
+}*/
+

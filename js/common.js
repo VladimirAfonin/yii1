@@ -1,0 +1,1 @@
+$('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();

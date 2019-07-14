@@ -190,6 +190,9 @@ $('#firstname-save').on('click', function(e){
           last_name: lastName,
        },
        success: function(res) {
+           $('#firstname-1').html(fname);
+           $('#middlename-1').html(middleName);
+           $('#lastname-1').html(lastName);
            $('#firstname-close').trigger('click');
        },
        error: function(res) {

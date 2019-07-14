@@ -304,11 +304,13 @@ $this->pageTitle=Yii::app()->name;
                                       placeholder="Comments max 200 characters"
                                       rows="5"
                                       id="aboutme-input"
+                                      onkeyup="content_length()"
                             >
                             </textarea>
                             <span class="aboutme-limit">
-                                <span id="chars-sum">200</span>
-                                <span id="remaining-txt">characters remaining #92</span>
+                                <span id="chars-sum"></span>
+                                <span id="remaining-txt">characters remaining</span>
+                                <span id="aboutme-error" class="danger hidden">Maximum 200 allowed</span>
                             </span>
                         </div>
                     </div>

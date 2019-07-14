@@ -5,6 +5,20 @@ function getShorty($string, $count_words) {
     return shorty.join(' ', shorty).concat('...');
 }
 
+function content_length() {
+    var content = $('#aboutme-input').val();
+    var length = content.length;
+    var remaining = 200 - length;
+    $('#chars-sum').html(remaining);
+    if(remaining === 0) {
+        $('#aboutme-error').removeClass('hidden');
+        $('#remaining-txt, #chars-sum').addClass('hidden');
+    } else {
+        $('#aboutme-error').addClass('hidden');
+        $('#remaining-txt, #chars-sum').removeClass('hidden');
+    }
+}
+
 $.ajax({
     url: 'http://people.loc/user/1',
 //            dataType: 'json',
@@ -50,6 +64,8 @@ $.ajax({
 
             $('#keywords').html(res['keywords']);
             $('.userid-view').html(res['user_login']);
+
+            content_length();
 
         }
 

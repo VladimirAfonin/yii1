@@ -1,5 +1,10 @@
 $('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();
 
+function getShorty($string, $count_words) {
+    var shorty = $string.split(" ", $count_words);
+    return shorty.join(' ', shorty).concat('...');
+}
+
 $.ajax({
     url: 'http://people.loc/user/1',
 //            dataType: 'json',
@@ -36,7 +41,7 @@ $.ajax({
             $('#year').val(new_date[2]);
             $('#day').val(new_date[1]);
 
-            $('#aboutme-1').html(res['about_me']);
+            $('#aboutme-1').html(getShorty(res['about_me'], 5));
             $('#aboutme-input').val(res['about_me']);
 
             $('#relationStatus').val(res['relation_status']);
@@ -258,7 +263,7 @@ $('#aboutme-save').on('click', function(e){
             about_me: aboutMe,
         },
         success: function(res) {
-            $('#aboutme-1').html(aboutMe);
+            $('#aboutme-1').html(getShorty(aboutMe, 5));
             $('#aboutme-close').trigger('click');
         },
         error: function(res) {

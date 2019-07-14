@@ -43,7 +43,7 @@ $this->pageTitle=Yii::app()->name;
                                     <span class="fa fa-edit" id="firstname-edit"></span>
                                 </div>
                                 <div class="firstname-edit hidden">
-                                    <input class="form-control form-control-custom required" maxlength="25" placeholder="first name" type="text" value="Bala">
+                                    <input class="form-control form-control-custom required" id="fname-input" maxlength="25" placeholder="first name" type="text" value="">
                                     <span class="danger hidden" id="f-name-error">First Name cannot be left blank</span>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ $this->pageTitle=Yii::app()->name;
                                             <span class="fa fa-edit" id="middlename-edit"></span>
                                         </div>
                                         <div class="middle-edit hidden">
-                                            <input class="form-control form-control-custom required" maxlength="25" placeholder="middle name" type="text" value="123">
+                                            <input class="form-control form-control-custom required" id="middlename-input" maxlength="25" placeholder="middle name" type="text" value="">
                                             <span class="danger hidden" id="m-name-error">Middle Name cannot be left blank</span>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@ $this->pageTitle=Yii::app()->name;
                                             <span class="fa fa-edit" id="lastname-edit"></span>
                                         </div>
                                         <div class="lastname-edit hidden">
-                                            <input class="form-control form-control-custom required" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
+                                            <input class="form-control form-control-custom required" id="lastname-input" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
                                             <span class="danger hidden" id="l-name-error">Last Name cannot be left blank</span>
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@ $this->pageTitle=Yii::app()->name;
                                     <span class="icons fa fa-lock" style="color: #3b5998;"></span>
                                 </div>
                                 <div class="nickname-edit hidden">
-                                    <input class="form-control form-control-custom required" maxlength="25" placeholder="nick name" type="text" value="xyz">
+                                    <input class="form-control form-control-custom required" id="nickname-input" maxlength="25" placeholder="nick name" type="text" value="">
                                     <!--                                <span class="danger hidden" id="n-name-error">First Name cannot be left blank</span>-->
                                     <span class="danger hidden" id="n-name-error">Nick Name cannot be left blank</span>
                                 </div>
@@ -303,7 +303,8 @@ $this->pageTitle=Yii::app()->name;
                                       maxlength="200" name="aboutme"
                                       placeholder="Comments max 200 characters"
                                       rows="5"
-                            >This is all about how great I am at this site....
+                                      id="aboutme-input"
+                            >
                             </textarea>
                             <span class="aboutme-limit">
                                 <span id="chars-sum">200</span>
@@ -356,7 +357,7 @@ $this->pageTitle=Yii::app()->name;
                                 <option value="323">In a open relationship</option>
                                 <option value="324">Its complicated</option>
                                 <option value="325">Separated</option>
-                                <option value="326" selected="">Divorced</option>
+                                <option value="326">Divorced</option>
                                 <option value="327">Widowed</option>
                             </select>
                             <span class="danger hidden" id="relation-error">Please select your relationship status</span>

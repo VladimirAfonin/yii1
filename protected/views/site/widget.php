@@ -40,7 +40,7 @@ $this->pageTitle=Yii::app()->name;
                                         Restricted
                                     </span>
                                     <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                    <span class="fa fa-edit"></span>
+                                    <span class="fa fa-edit" id="firstname-edit"></span>
                                 </div>
                                 <div class="firstname-edit hidden">
                                     <input class="form-control form-control-custom required" maxlength="25" placeholder="first name" type="text" value="Bala">
@@ -63,7 +63,7 @@ $this->pageTitle=Yii::app()->name;
                                                 </span>
                                             <?php endif; ?>
                                             <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                            <span class="fa fa-edit"></span>
+                                            <span class="fa fa-edit" id="middlename-edit"></span>
                                         </div>
                                         <div class="middle-edit hidden">
                                             <input class="form-control form-control-custom required" maxlength="25" placeholder="middle name" type="text" value="123">
@@ -84,7 +84,7 @@ $this->pageTitle=Yii::app()->name;
                                                 </span>
                                             <?php endif; ?>
                                             <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                            <span class="fa fa-edit"></span>
+                                            <span class="fa fa-edit" id="lastname-edit"></span>
                                         </div>
                                         <div class="lastname-edit hidden">
                                             <input class="form-control form-control-custom required" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
@@ -104,9 +104,9 @@ $this->pageTitle=Yii::app()->name;
                 <td class="col-md-1">
                     <div class="icons icons-view">
                         <div class="action-icons">
-                            <span data-toggle="tooltip" title="Save" class="fa fa-save hidden"></span>
-                            <span class="fa fa-close hidden " title="Cancel #90"></span>
-                            <span class="fa fa-info-circle show-actions" title="Info"></span>
+                            <span data-toggle="tooltip" title="Save" id="firstname-save" class="fa fa-save hidden"></span>
+                            <span class="fa fa-close hidden " id="firstname-close" title="Cancel #90"></span>
+                            <span class="fa fa-info-circle show-actions" id="firstname-info" title="Info"></span>
                         </div>
                     </div>
                 </td>

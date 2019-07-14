@@ -38,6 +38,36 @@ $.ajax({
     },
 });
 
+// firstname
+$('#firstname-edit').on('click', function(e){
+    $('.active').trigger('click');
+    $('#firstname-close').addClass('active').css('opacity', 1);
+    $('#firstname-info, #firstname-edit, .middle-edit, .lastname-edit').addClass('hidden');
+    $('.firstname-edit, #firstname-save, #firstname-close').removeClass('hidden');
+});
+$('#firstname-close').on('click', function(e){
+    $('#firstname-close').removeClass('active');
+    $('.firstname-edit, .middle-edit, .lastname-edit, #firstname-close, #firstname-save').addClass('hidden');
+    $('#firstname-edit, #middlename-edit, #lastname-edit, #firstname-info').removeClass('hidden');
+    $('#firstname-trash').css('opacity', 0);
+});
+
+// middlename
+$('#middlename-edit').on('click', function(e){
+    $('.active').trigger('click');
+    $('#firstname-close').addClass('active').css('opacity', 1);
+    $('#firstname-info, #middlename-edit, .firstname-edit, .lastname-edit').addClass('hidden');
+    $('.middle-edit, #firstname-save, #firstname-close').removeClass('hidden');
+});
+
+// lastname
+$('#lastname-edit').on('click', function(e){
+    $('.active').trigger('click');
+    $('#firstname-close').addClass('active').css('opacity', 1);
+    $('#firstname-info, #lastname-edit, .firstname-edit, .middle-edit').addClass('hidden');
+    $('.lastname-edit, #firstname-save, #firstname-close').removeClass('hidden');
+});
+
 // nickname
 $('#nickname-edit').on('click', function(e){
     $('.active').trigger('click');

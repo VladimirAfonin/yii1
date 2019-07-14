@@ -14,131 +14,131 @@ $this->pageTitle=Yii::app()->name;
         </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="col-md-11">
-                    <div class="w-100">
-                        <div class="col-md-4">
-                            <div class="firstname">
-                                <div class="firstname-view">
-                                    <span id="firstname-1">
-                                        Restricted
-                                    </span>
-                                    <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                    <span class="fa fa-edit" id="firstname-edit"></span>
-                                </div>
-                                <div class="firstname-edit hidden">
-                                    <input class="form-control form-control-custom required" id="fname-input" maxlength="25" placeholder="first name" type="text" value="">
-                                    <span class="danger hidden" id="f-name-error">First Name cannot be left blank</span>
-                                </div>
+        <tr>
+            <td class="col-md-11">
+                <div class="w-100">
+                    <div class="col-md-4">
+                        <div class="firstname">
+                            <div class="firstname-view">
+                                <span id="firstname-1">
+                                    Restricted
+                                </span>
+                                <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
+                                <span class="fa fa-edit" id="firstname-edit"></span>
+                            </div>
+                            <div class="firstname-edit hidden">
+                                <input class="form-control form-control-custom required" id="fname-input" maxlength="25" placeholder="first name" type="text" value="">
+                                <span class="danger hidden" id="f-name-error">First Name cannot be left blank</span>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="w-100">
-                                <div class="col-md-6 nopadding">
-                                    <div class="middlename">
-                                        <div class="middlename-view">
-                                            <?php if($guest) : ?>
-                                                <span id="middlename-restrict" class="danger">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="w-100">
+                            <div class="col-md-6 nopadding">
+                                <div class="middlename">
+                                    <div class="middlename-view">
+                                        <?php if($guest) : ?>
+                                            <span id="middlename-restrict" class="danger">
+                                            Restricted
+                                        </span>
+                                        <?php else: ?>
+                                            <span id="middlename-1">
                                                 Restricted
                                             </span>
-                                            <?php else: ?>
-                                                <span id="middlename-1">
-                                                    Restricted
-                                                </span>
-                                            <?php endif; ?>
-                                            <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                            <span class="fa fa-edit" id="middlename-edit"></span>
-                                        </div>
-                                        <div class="middle-edit hidden">
-                                            <input class="form-control form-control-custom required" id="middlename-input" maxlength="25" placeholder="middle name" type="text" value="">
-                                            <span class="danger hidden" id="m-name-error">Middle Name cannot be left blank</span>
-                                        </div>
+                                        <?php endif; ?>
+                                        <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
+                                        <span class="fa fa-edit" id="middlename-edit"></span>
                                     </div>
-                                </div>
-                                <div class="col-md-6 nopadding">
-                                    <div class="lastname">
-                                        <div class="lastname-view">
-                                            <?php if($guest) : ?>
-                                                <span id="lastname-restrict" class="danger">
-                                                Restricted
-                                            </span>
-                                            <?php else: ?>
-                                                <span id="lastname-1">
-                                                    Restricted
-                                                </span>
-                                            <?php endif; ?>
-                                            <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                            <span class="fa fa-edit" id="lastname-edit"></span>
-                                        </div>
-                                        <div class="lastname-edit hidden">
-                                            <input class="form-control form-control-custom required" id="lastname-input" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
-                                            <span class="danger hidden" id="l-name-error">Last Name cannot be left blank</span>
-                                        </div>
+                                    <div class="middle-edit hidden">
+                                        <input class="form-control form-control-custom required" id="middlename-input" maxlength="25" placeholder="middle name" type="text" value="">
+                                        <span class="danger hidden" id="m-name-error">Middle Name cannot be left blank</span>
                                     </div>
                                 </div>
                             </div>
-
-
+                            <div class="col-md-6 nopadding">
+                                <div class="lastname">
+                                    <div class="lastname-view">
+                                        <?php if($guest) : ?>
+                                            <span id="lastname-restrict" class="danger">
+                                            Restricted
+                                        </span>
+                                        <?php else: ?>
+                                            <span id="lastname-1">
+                                                Restricted
+                                            </span>
+                                        <?php endif; ?>
+                                        <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
+                                        <span class="fa fa-edit" id="lastname-edit"></span>
+                                    </div>
+                                    <div class="lastname-edit hidden">
+                                        <input class="form-control form-control-custom required" id="lastname-input" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
+                                        <span class="danger hidden" id="l-name-error">Last Name cannot be left blank</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+
+                    </div>
 <!--                        <div class="col-md-12">-->
-                            <span class="tooltip-custom tooltip-info hidden">You can display your names differently to different users. #71</span>
+                        <span class="tooltip-custom tooltip-info hidden">You can display your names differently to different users. #71</span>
 <!--                        </div>-->
+                </div>
+            </td>
+            <td class="col-md-1">
+                <div class="icons icons-view">
+                    <div class="action-icons">
+                        <span data-toggle="tooltip" title="Save" id="firstname-save" class="fa fa-save hidden"></span>
+                        <span class="fa fa-close hidden " id="firstname-close" title="Cancel #90"></span>
+                        <span class="fa fa-info-circle show-actions" id="firstname-info" title="Info"></span>
                     </div>
-                </td>
-                <td class="col-md-1">
-                    <div class="icons icons-view">
-                        <div class="action-icons">
-                            <span data-toggle="tooltip" title="Save" id="firstname-save" class="fa fa-save hidden"></span>
-                            <span class="fa fa-close hidden " id="firstname-close" title="Cancel #90"></span>
-                            <span class="fa fa-info-circle show-actions" id="firstname-info" title="Info"></span>
-                        </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="col-md-11">
+                <div class="w-100">
+                    <div class="col-md-4">
+                        <label for="">Nick Name</label>
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-11">
-                    <div class="w-100">
-                        <div class="col-md-4">
-                            <label for="">Nick Name</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="col-md-12 nopadding">
-                                <div class="nickname-view">
-                                    <?php if($guest) : ?>
-                                    <span id="nickname-restrict" class="danger">
-                                        Restricted
-                                    </span>
-                                    <?php else: ?>
-                                    <span id="nickname-1">
-                                        Restricted
-                                    </span>
-                                    <?php endif; ?>
-                                    <span class="icons fa fa-lock" style="color: #3b5998;"></span>
-                                </div>
-                                <div class="nickname-edit hidden">
-                                    <input class="form-control form-control-custom required" id="nickname-input" maxlength="25" placeholder="nick name" type="text" value="">
-                                    <!--                                <span class="danger hidden" id="n-name-error">First Name cannot be left blank</span>-->
-                                    <span class="danger hidden" id="n-name-error">Nick Name cannot be left blank</span>
-                                </div>
+                    <div class="col-md-8">
+                        <div class="col-md-12 nopadding">
+                            <div class="nickname-view">
+                                <?php if($guest) : ?>
+                                <span id="nickname-restrict" class="danger">
+                                    Restricted
+                                </span>
+                                <?php else: ?>
+                                <span id="nickname-1">
+                                    Restricted
+                                </span>
+                                <?php endif; ?>
+                                <span class="icons fa fa-lock" style="color: #3b5998;"></span>
                             </div>
+                            <div class="nickname-edit hidden">
+                                <input class="form-control form-control-custom required" id="nickname-input" maxlength="25" placeholder="nick name" type="text" value="">
+                                <!--                                <span class="danger hidden" id="n-name-error">First Name cannot be left blank</span>-->
+                                <span class="danger hidden" id="n-name-error">Nick Name cannot be left blank</span>
+                            </div>
+                        </div>
 
-                        </div>
                     </div>
-                </td>
-                <td class="col-md-1">
-                    <div class="icons icons-view">
-                        <div class="action-icons">
-                            <?php if(!$guest): ?>
-                                <span class="fa fa-edit show-actions" id="nickname-edit" title="Edit"></span>
-                                <span data-toggle="tooltip" title="Delete" id="nickname-trash" class="fa fa-trash show-actions"></span>
-                                <span data-toggle="tooltip" title="Save" class="fa fa-save hidden" id="nickname-save"></span>
-                            <?php endif; ?>
-                            <span class="fa fa-close hidden show-actions" id="nickname-close" title="Cancel #90"></span>
-                            <span class="fa fa-info-circle  show-actions" id="nickname-info" title="Info"></span>
-                        </div>
+                </div>
+            </td>
+            <td class="col-md-1">
+                <div class="icons icons-view">
+                    <div class="action-icons">
+                        <?php if(!$guest): ?>
+                            <span class="fa fa-edit show-actions" id="nickname-edit" title="Edit"></span>
+                            <span data-toggle="tooltip" title="Delete" id="nickname-trash" class="fa fa-trash show-actions"></span>
+                            <span data-toggle="tooltip" title="Save" class="fa fa-save hidden" id="nickname-save"></span>
+                        <?php endif; ?>
+                        <span class="fa fa-close hidden show-actions" id="nickname-close" title="Cancel #90"></span>
+                        <span class="fa fa-info-circle  show-actions" id="nickname-info" title="Info"></span>
                     </div>
-                </td>
-            </tr>
+                </div>
+            </td>
+        </tr>
         <tr>
             <td class="col-md-11">
                 <div class="w-100">
@@ -295,6 +295,7 @@ $this->pageTitle=Yii::app()->name;
                                 <span id="chars-sum"></span>
                                 <span id="remaining-txt">characters remaining</span>
                                 <span id="aboutme-error" class="danger hidden">Maximum 200 allowed</span>
+                                <span class="danger hidden" id="aboutme-empty-error">About me cannot be left blank</span>
                             </span>
                         </div>
                     </div>

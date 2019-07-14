@@ -181,6 +181,32 @@ $('#firstname-save').on('click', function(e){
     var middleName = $('#middlename-input').val();
     var lastName = $('#lastname-input').val();
 
+    if(fname.length === 0) {
+        $('.firstname-edit').removeClass('hidden');
+        $('#f-name-error').removeClass('hidden');
+        return false;
+    }  else {
+        $('.firstname-edit').addClass('hidden');
+        $('#f-name-error').addClass('hidden');
+    }
+
+    if(middleName.length === 0) {
+        $('.middlename-edit').removeClass('hidden');
+        $('#m-name-error').removeClass('hidden');
+        return false;
+    } else {
+        $('.middlename-edit').addClass('hidden');
+        $('#m-name-error').addClass('hidden');
+    }
+     if(lastName.length === 0) {
+        $('.lastname-edit').removeClass('hidden');
+        $('#l-name-error').removeClass('hidden');
+        return false;
+    } else {
+         $('.lastname-edit').addClass('hidden');
+         $('#l-name-error').addClass('hidden');
+     }
+
    $.ajax({
        url: 'http://people.loc/user/1',
        type: 'PATCH',
@@ -205,6 +231,16 @@ $('#firstname-save').on('click', function(e){
 // save nickname
 $('#nickname-save').on('click', function(e){
     var nickName = $('#nickname-input').val();
+
+    if(nickName.length === 0) {
+        $('.nickname-edit').removeClass('hidden');
+        $('#n-name-error').removeClass('hidden');
+        return false;
+    } else {
+        $('.nickname-edit').addClass('hidden');
+        $('#n-name-error').addClass('hidden');
+    }
+
     $.ajax({
         url: 'http://people.loc/user/1',
         type: 'PATCH',
@@ -250,6 +286,22 @@ $('#birth-save').on('click', function(e){
     var day = $('#day').val();
     var year = $('#year').val();
 
+    // validate for empty field
+    if(!month || !day || !year) {
+        $('#dob-error').removeClass('hidden');
+        return false;
+    } else {
+        $('#dob-error').addClass('hidden');
+    }
+
+    // validate for very young man
+    if(year > 2004) {
+        $('#dob-young').removeClass('hidden');
+        return false;
+    } else {
+        $('#dob-young').addClass('hidden');
+    }
+
     var newTimeStamp = Date.parse(year + '-' + month + '-' + day)/1000;
 
     $.ajax({
@@ -275,6 +327,14 @@ $('#birth-save').on('click', function(e){
 // save 'about me'
 $('#aboutme-save').on('click', function(e){
     var aboutMe = $('#aboutme-input').val();
+
+    if(aboutMe.length === 0) {
+        $('#aboutme-empty-error').removeClass('hidden');
+        return false;
+    } else {
+        $('#aboutme-empty-error').addClass('hidden');
+    }
+
     $.ajax({
         url: 'http://people.loc/user/1',
         type: 'PATCH',

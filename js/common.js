@@ -33,6 +33,28 @@ function getCancelRow(el) {
    }
 }
 
+function getErrorDiv(el){
+    if(el == '#fname-input') {
+        return '.firstname-edit';
+    } else if(el == '#middlename-input') {
+        return '.middle-edit';
+    } else if(el == '#lastname-input') {
+        return '.lastname-edit';
+    } else if(el == '#nickname-input') {
+        return '.nickname-edit';
+    } else if(el == '#year') {
+        return '.birth-edit';
+    } else if(el == '#day') {
+        return '.birth-edit';
+    } else if(el == '#month') {
+        return '.birth-edit';
+    } else if(el == '#aboutme-input') {
+        return '.aboutme-edit';
+    } else if(el == '#relationStatus') {
+        return '.relation-edit';
+    }
+}
+
 var savedData = [];
 var currentData = [];
 
@@ -224,10 +246,14 @@ $('#nickname-edit').on('click', function(e){
 
     var flag = false;
     var cancelId;
+    var errorInput;
+    var errorDiv;
     if(nickNameFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
+                errorInput = (Object.keys(currentData[index])[0]);
+                errorDiv = getErrorDiv(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;
             }
@@ -235,9 +261,13 @@ $('#nickname-edit').on('click', function(e){
 
         if(flag) {
             $('#' + cancelId).removeClass('hidden');
+            $(errorDiv).removeClass('hidden');
+            $(errorInput).removeClass('hidden');
             return false;
         } else {
             $('#n-name-change').addClass('hidden');
+            $(errorDiv).addClass('hidden');
+            $(errorInput).addClass('hidden');
         }
     }
 
@@ -265,10 +295,14 @@ $('#relation-edit').on('click', function(e){
 
     var flag = false;
     var cancelId;
+    var errorInput;
+    var errorDiv;
     if(relationFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
+                errorInput = (Object.keys(currentData[index])[0]);
+                errorDiv = getErrorDiv(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;
             }
@@ -276,9 +310,13 @@ $('#relation-edit').on('click', function(e){
 
         if(flag) {
             $('#' + cancelId).removeClass('hidden');
+            $(errorDiv).removeClass('hidden');
+            $(errorInput).removeClass('hidden');
             return false;
         } else {
             $('#relation-name-change').addClass('hidden');
+            $(errorDiv).addClass('hidden');
+            $(errorInput).addClass('hidden');
         }
     }
 
@@ -305,10 +343,14 @@ $('#birth-edit').on('click', function(e){
 
     var flag = false;
     var cancelId;
+    var errorInput;
+    var errorDiv;
     if(birthFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
+                errorInput = (Object.keys(currentData[index])[0]);
+                errorDiv = getErrorDiv(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;
             }
@@ -316,9 +358,13 @@ $('#birth-edit').on('click', function(e){
 
         if(flag) {
             $('#' + cancelId).removeClass('hidden');
+            $(errorDiv).removeClass('hidden');
+            $(errorInput).removeClass('hidden');
             return false;
         } else {
             $('#b-name-change').addClass('hidden');
+            $(errorDiv).addClass('hidden');
+            $(errorInput).addClass('hidden');
         }
     }
 
@@ -344,10 +390,14 @@ $('#aboutme-edit').on('click', function(e){
 
     var flag = false;
     var cancelId;
+    var errorInput;
+    var errorDiv;
     if(aboutmeFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
+                errorInput = (Object.keys(currentData[index])[0]);
+                errorDiv = getErrorDiv(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;
             }
@@ -355,9 +405,13 @@ $('#aboutme-edit').on('click', function(e){
 
         if(flag) {
             $('#' + cancelId).removeClass('hidden');
+            $(errorDiv).removeClass('hidden');
+            $(errorInput).removeClass('hidden');
             return false;
         } else {
             $('#aboutme-name-change').addClass('hidden');
+            $(errorDiv).addClass('hidden');
+            $(errorInput).addClass('hidden');
         }
     }
 

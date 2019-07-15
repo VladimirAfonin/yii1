@@ -7,15 +7,17 @@ function getShorty($string, $count_words) {
 
 function content_length() {
     var content = $('#aboutme-input').val();
-    var length = content.length;
-    var remaining = 200 - length;
-    $('#chars-sum').html(remaining);
-    if(remaining === 0) {
-        $('#aboutme-error').removeClass('hidden');
-        $('#remaining-txt, #chars-sum').addClass('hidden');
-    } else {
-        $('#aboutme-error').addClass('hidden');
-        $('#remaining-txt, #chars-sum').removeClass('hidden');
+    if(content) {
+        var length = content.length;
+        var remaining = 200 - length;
+        $('#chars-sum').html(remaining);
+        if(remaining === 0) {
+            $('#aboutme-error').removeClass('hidden');
+            $('#remaining-txt, #chars-sum').addClass('hidden');
+        } else {
+            $('#aboutme-error').addClass('hidden');
+            $('#remaining-txt, #chars-sum').removeClass('hidden');
+        }
     }
 }
 

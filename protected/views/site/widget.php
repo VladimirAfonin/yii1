@@ -77,12 +77,12 @@ $this->pageTitle=Yii::app()->name;
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-<!--                        <div class="col-md-12">-->
-                        <span class="tooltip-custom tooltip-info hidden">You can display your names differently to different users. #71</span>
-<!--                        </div>-->
+                    <span class="confirmation hidden" id="f-name-change">Current changes not yet saved. Are you sure want to cancel this change?
+                        <span class="yes" id="firstname-yes"><i class="fa fa-check"></i></span>
+                        <span class="no" id="firstname-cancel-no"><i class="fa fa-close"></i></span>
+                    </span>
+                    <span class="tooltip-custom tooltip-info hidden">You can display your names differently to different users. #71</span>
                 </div>
             </td>
             <td class="col-md-1">
@@ -117,12 +117,13 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                             <div class="nickname-edit hidden">
                                 <input class="form-control form-control-custom required" id="nickname-input" maxlength="25" placeholder="nick name" type="text" value="">
-                                <!--                                <span class="danger hidden" id="n-name-error">First Name cannot be left blank</span>-->
-                                <span class="danger hidden" id="n-name-error">Nick Name cannot be left blank</span>
+                                 <span class="danger hidden" id="n-name-error">First Name cannot be left blank</span>
                             </div>
                         </div>
-
                     </div>
+                    <span class="confirmation hidden" id="n-name-change">Current changes not yet saved. Are you sure want to cancel this change?
+                    <span class="yes" id="nickname-yes"><i class="fa fa-check"></i></span>
+                    <span class="no" id="nickname-cancel-no"><i class="fa fa-close"></i></span>
                 </div>
             </td>
             <td class="col-md-1">
@@ -255,6 +256,10 @@ $this->pageTitle=Yii::app()->name;
                             <span class="danger hidden" id="dob-failed">Could not store date of birth. please try again.</span>
                         </div>
                     </div>
+                        <span class="confirmation hidden" id="b-name-change">Current changes not yet saved. Are you sure want to cancel this change?
+                        <span class="yes" id="birthday-yes"><i class="fa fa-check"></i></span>
+                        <span class="no" id="birthday-cancel-no"><i class="fa fa-close"></i></span>
+                    </span>
                     <span class="tooltip-info"></span>
                 </div>
             </td>
@@ -294,11 +299,15 @@ $this->pageTitle=Yii::app()->name;
                             <span class="aboutme-limit">
                                 <span id="chars-sum"></span>
                                 <span id="remaining-txt">characters remaining</span>
-                                <span id="aboutme-error" class="danger hidden">Maximum 200 allowed</span>
+                                <span id="aboutme-error" class="danger hidden">Maximum 200 symbols are allowed</span>
                                 <span class="danger hidden" id="aboutme-empty-error">About me cannot be left blank</span>
                             </span>
                         </div>
                     </div>
+                    <span class="confirmation hidden" id="aboutme-name-change">Current changes not yet saved. Are you sure want to cancel this change?
+                        <span class="yes" id="aboutme-yes"><i class="fa fa-check"></i></span>
+                        <span class="no" id="aboutme-cancel-no"><i class="fa fa-close"></i></span>
+                    </span>
                 </div>
                 <span class="tooltip-custom tooltip-info hidden">
                     Your brief Introduction to MyLokal Community #79
@@ -350,6 +359,10 @@ $this->pageTitle=Yii::app()->name;
                             <span class="danger hidden" id="relation-error">Please select your relationship status</span>
                         </div>
                     </div>
+                    <span class="confirmation hidden" id="relation-name-change">Current changes not yet saved. Are you sure want to cancel this change?
+                        <span class="yes" id="relation-yes"><i class="fa fa-check"></i></span>
+                        <span class="no" id="relation-cancel-no"><i class="fa fa-close"></i></span>
+                    </span>
                 </div>
                 <span class="tooltip-custom tooltip-info hidden">
                     Your brief Introduction to MyLokal Community #79

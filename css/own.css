@@ -52,6 +52,9 @@ body {
     cursor: pointer;
     color: #4267b2;
 }
+.fa-check, .fa-close{
+    cursor: pointer;
+}
 .danger {
     color: red;
     font-size: 13px;
@@ -138,6 +141,17 @@ table#widget-table tr span.show-actions {
 
 table#widget-table tr:hover span.show-actions {
     opacity: 1!important;
+}
+
+.confirmation {
+    color: #8a6d3b;
+    font-weight: 600;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.yes{
+    color: green!important;
 }
 
 /*table#widget-table tr div.action-icons {

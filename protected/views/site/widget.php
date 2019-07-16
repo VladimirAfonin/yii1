@@ -417,10 +417,10 @@ $this->pageTitle=Yii::app()->name;
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <?php if(!$guest): ?>
+                        <?php /*if(!$guest): */?><!--
                             <span class="fa fa-edit show-actions" id="keywords-edit" title="Edit"></span>
-                        <?php endif; ?>
-                        <span class="fa fa-close hidden " id="keywords-close" title="Cancel #90"></span>
+                        --><?php /*endif; */?>
+<!--                        <span class="fa fa-close hidden " id="keywords-close" title="Cancel #90"></span>-->
                         <span class="fa fa-info-circle show-actions" id="keywords-info" title="Info"></span>
                     </div>
                 </div>

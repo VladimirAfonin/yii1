@@ -1,5 +1,7 @@
 $('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();
 
+const API_URL = 'http://api.myshkinaradost.ru/';
+
 function getShorty($string, $count_words) {
     var shorty = $string.split(" ", $count_words);
     return shorty.join(' ', shorty).concat('...');
@@ -87,7 +89,7 @@ function getCurrentData(){
 }
 
 $.ajax({
-    url: 'http://api.myshkinaradost.ru/user/1',
+    url: API_URL + 'user/1',
     type: 'GET',
     async: false,
     success: function(res) {
@@ -478,7 +480,7 @@ $('#firstname-save').on('click', function(e){
      }
 
    $.ajax({
-       url: 'http://api.myshkinaradost.ru/user/1',
+       url: API_URL + 'user/1',
        type: 'PATCH',
        async: false,
        data: {
@@ -516,7 +518,7 @@ $('#nickname-save').on('click', function(e){
     }
 
     $.ajax({
-        url: 'http://api.myshkinaradost.ru/user/1',
+        url: API_URL + 'user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -578,7 +580,7 @@ $('#nickname-trash').on('click', function(e){
         return false;
     }
     $.ajax({
-        url: 'http://api.myshkinaradost.ru/user/1',
+        url: API_URL + 'user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -644,7 +646,7 @@ $('#birth-save').on('click', function(e){
     var newTimeStamp = Date.parse(year + '-' + month + '-' + day)/1000;
 
     $.ajax({
-        url: 'http://api.myshkinaradost.ru/user/1',
+        url: API_URL + 'user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -695,7 +697,7 @@ $('#aboutme-save').on('click', function(e){
     }
 
     $.ajax({
-        url: 'http://api.myshkinaradost.ru/user/1',
+        url: API_URL + 'user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -747,7 +749,7 @@ $('#relation-save').on('click', function(e){
     }
 
     $.ajax({
-        url: 'http://api.myshkinaradost.ru/user/1',
+        url: API_URL + 'user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -807,7 +809,7 @@ $('#relation-trash').on('click', function(e){
         return false;
     }
     $.ajax({
-        url: 'http://api.myshkinaradost.ru/user/1',
+        url: API_URL + 'user/1',
         type: 'PATCH',
         async: false,
         data: {

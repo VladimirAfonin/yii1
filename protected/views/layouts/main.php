@@ -46,17 +46,17 @@
         </div>
         <div class="row height_div text-center top-block-height">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                top block
+                <span class="blocks">TOP BLOCK</span>
             </div>
         </div>
         <div class="row equal">
             <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs height_div" style="border: 1px solid gray">
-                left block
+                <span class="blocks">LEFT BLOCK</span>
             </div>
             <div class="p-0 w-100 col-lg-6 col-md-6 col-sm-6 col-xs-12" style="border: 1px solid gray;">
                <div class=" col-lg-12 col-xs-12 col-md-12 container-custom">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-block-height text-center" style="border: 1px solid gray">
-                        center block
+                        <span class="blocks" style="color: #000;">CENTER BLOCK</span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #fff!important;">
                         <?= $content; ?>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs height_div" style="border: 1px solid gray">
-                right block
+                <span class="blocks">RIGHT BLOCK</span>
             </div>
         </div>
     </div>

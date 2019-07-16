@@ -154,9 +154,9 @@ table#widget-table tr:hover span.show-actions {
     color: green!important;
 }
 
-/*table#widget-table tr div.action-icons {
-    opacity: 0;
-}*/
-
+.blocks {
+    color: #ffffff;
+    font-size: 16px;
+}
 
 

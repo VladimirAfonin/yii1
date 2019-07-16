@@ -1,6 +1,6 @@
 $('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();
 
-const API_URL = 'http://api.myshkinaradost.ru/';
+const API_URL = 'https://api.myshkinaradost.ru/';
 
 function getShorty($string, $count_words) {
     var shorty = $string.split(" ", $count_words);

@@ -24,7 +24,9 @@ $this->pageTitle=Yii::app()->name;
                                     Restricted
                                 </span>
                                 <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                <span class="fa fa-edit" id="firstname-edit"></span>
+                                <?php if(!$guest): ?>
+                                    <span class="fa fa-edit" id="firstname-edit"></span>
+                                <?php endif; ?>
                             </div>
                             <div class="firstname-edit hidden">
                                 <input class="form-control form-control-custom required" id="fname-input" maxlength="25" placeholder="first name" type="text" value="">
@@ -47,7 +49,9 @@ $this->pageTitle=Yii::app()->name;
                                             </span>
                                         <?php endif; ?>
                                         <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                        <span class="fa fa-edit" id="middlename-edit"></span>
+                                        <?php if(!$guest): ?>
+                                            <span class="fa fa-edit" id="middlename-edit"></span>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="middle-edit hidden">
                                         <input class="form-control form-control-custom required" id="middlename-input" maxlength="25" placeholder="middle name" type="text" value="">
@@ -68,7 +72,9 @@ $this->pageTitle=Yii::app()->name;
                                             </span>
                                         <?php endif; ?>
                                         <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
-                                        <span class="fa fa-edit" id="lastname-edit"></span>
+                                        <?php if(!$guest): ?>
+                                            <span class="fa fa-edit" id="lastname-edit"></span>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="lastname-edit hidden">
                                         <input class="form-control form-control-custom required" id="lastname-input" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">

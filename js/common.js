@@ -87,7 +87,7 @@ function getCurrentData(){
 }
 
 $.ajax({
-    url: 'http://people.loc/user/1',
+    url: 'http://frontend.myshkinaradost.ru/user/1',
     type: 'GET',
     async: false,
     success: function(res) {
@@ -478,7 +478,7 @@ $('#firstname-save').on('click', function(e){
      }
 
    $.ajax({
-       url: 'http://people.loc/user/1',
+       url: 'http://frontend.myshkinaradost.ru/user/1',
        type: 'PATCH',
        async: false,
        data: {
@@ -516,7 +516,7 @@ $('#nickname-save').on('click', function(e){
     }
 
     $.ajax({
-        url: 'http://people.loc/user/1',
+        url: 'http://frontend.myshkinaradost.ru/user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -578,7 +578,7 @@ $('#nickname-trash').on('click', function(e){
         return false;
     }
     $.ajax({
-        url: 'http://people.loc/user/1',
+        url: 'http://frontend.myshkinaradost.ru/user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -644,7 +644,7 @@ $('#birth-save').on('click', function(e){
     var newTimeStamp = Date.parse(year + '-' + month + '-' + day)/1000;
 
     $.ajax({
-        url: 'http://people.loc/user/1',
+        url: 'http://frontend.myshkinaradost.ru/user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -695,7 +695,7 @@ $('#aboutme-save').on('click', function(e){
     }
 
     $.ajax({
-        url: 'http://people.loc/user/1',
+        url: 'http://frontend.myshkinaradost.ru/user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -747,7 +747,7 @@ $('#relation-save').on('click', function(e){
     }
 
     $.ajax({
-        url: 'http://people.loc/user/1',
+        url: 'http://frontend.myshkinaradost.ru/user/1',
         type: 'PATCH',
         async: false,
         data: {
@@ -807,7 +807,7 @@ $('#relation-trash').on('click', function(e){
         return false;
     }
     $.ajax({
-        url: 'http://people.loc/user/1',
+        url: 'http://frontend.myshkinaradost.ru/user/1',
         type: 'PATCH',
         async: false,
         data: {

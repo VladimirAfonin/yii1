@@ -4,7 +4,7 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 <h3><?php $guest = Yii::app()->user->isGuest ?></h3>
-<div class="people-info">
+<div class="people-info hidden">
     <table class="table table-striped people-info" id="widget-table">
         <thead>
         <tr class="tr-head">

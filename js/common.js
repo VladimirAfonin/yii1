@@ -1,6 +1,8 @@
 $('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();
 
-const API_URL = 'https://api.myshkinaradost.ru/';
+// const API_URL = 'https://api.myshkinaradost.ru/'; // todo: change this line
+const API_URL = 'http://people.loc/';
+const API_URL_WIDGET = 'http://people.loc/';
 
 function getShorty($string, $count_words) {
     var shorty = $string.split(" ", $count_words);
@@ -88,59 +90,85 @@ function getCurrentData(){
     currentData.push({'#relationStatus': $('#relationStatus').val()});
 }
 
+var widgetStatus = false;
 $.ajax({
-    url: API_URL + 'user/1',
+    url: API_URL_WIDGET + 'widgets/1',
     type: 'GET',
     async: false,
     success: function(res) {
-        // console.log(res);
-        if(res) {
-            var user = res;
-            $('#firstname-1').html(res['first_name']);
-            $('#fname-input').val(res['first_name']);
-
-            $('#middlename-1').html(res['middle_name']);
-            $('#middlename-input').val(res['middle_name']);
-
-            $('#lastname-1').html(res['last_name']);
-            $('#lastname-input').val(res['last_name']);
-
-            $('#nickname-1').html(res['nick_name']);
-            $('#nickname-input').val(res['nick_name']);
-
-            // date of birth
-            var date_birth_timestamp = res['date_birth'];
-            var date_form = new Date(date_birth_timestamp*1000).toLocaleDateString();
-            var new_date = date_form.split('/');
-
-            $('#b-date-1').html(new_date[1]);
-            $('#b-year-1').html(new_date[2]);
-
-            const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-            $('#b-month-1').html(months[new_date[0] - 1]);
-
-            $('#month').val(new_date[0]);
-            $('#year').val(new_date[2]);
-            $('#day').val(new_date[1]);
-
-            $('#aboutme-1').html(getShorty(res['about_me'], 5));
-            $('#aboutme-input').val(res['about_me']);
-
-            $('#relationStatus').val(res['relation_status']);
-            var relationLabel = $("#relationStatus option:selected").text();
-            $('#relation-1').html(relationLabel);
-
-            $('#keywords').html(res['keywords']);
-            $('.userid-view').html(res['user_login']);
-
-            content_length();
-            commitData();
+        if(res['status'] == 1) {
+            widgetStatus = true;
+        } else {
+            widgetStatus = false;
+            $('.people-info').remove();
         }
-    },
-    error: function(res) {
         console.log(res);
     },
+    false: function(res) {
+        console.log('error');
+    },
+
 });
+
+if(widgetStatus) {
+    $('.people-info').removeClass('hidden');
+
+    $.ajax({
+        url: API_URL + 'user/1',
+        type: 'GET',
+        async: false,
+        success: function(res) {
+            // console.log(res);
+            if(res) {
+                var user = res;
+                $('#firstname-1').html(res['first_name']);
+                $('#fname-input').val(res['first_name']);
+
+                $('#middlename-1').html(res['middle_name']);
+                $('#middlename-input').val(res['middle_name']);
+
+                $('#lastname-1').html(res['last_name']);
+                $('#lastname-input').val(res['last_name']);
+
+                $('#nickname-1').html(res['nick_name']);
+                $('#nickname-input').val(res['nick_name']);
+
+                // date of birth
+                var date_birth_timestamp = res['date_birth'];
+                var date_form = new Date(date_birth_timestamp*1000).toLocaleDateString();
+                var new_date = date_form.split('/');
+
+                $('#b-date-1').html(new_date[1]);
+                $('#b-year-1').html(new_date[2]);
+
+                const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+                $('#b-month-1').html(months[new_date[0] - 1]);
+
+                $('#month').val(new_date[0]);
+                $('#year').val(new_date[2]);
+                $('#day').val(new_date[1]);
+
+                $('#aboutme-1').html(getShorty(res['about_me'], 5));
+                $('#aboutme-input').val(res['about_me']);
+
+                $('#relationStatus').val(res['relation_status']);
+                var relationLabel = $("#relationStatus option:selected").text();
+                $('#relation-1').html(relationLabel);
+
+                $('#keywords').html(res['keywords']);
+                $('.userid-view').html(res['user_login']);
+
+                content_length();
+                commitData();
+            }
+        },
+        error: function(res) {
+            console.log(res);
+        },
+    });
+}
+
+
 
 // firstname
 $('#firstname-edit').on('click', function(e){

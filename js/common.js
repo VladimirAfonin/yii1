@@ -1,10 +1,10 @@
 $('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();
 
-const API_URL_WIDGET = 'https://api.myshkinaradost.ru/';
-const API_URL = 'https://api.myshkinaradost.ru/'; // todo: change this line
+// const API_URL_WIDGET = 'https://api.myshkinaradost.ru/';
+// const API_URL = 'https://api.myshkinaradost.ru/'; // todo: change this line
 
-// const API_URL = 'http://people.loc/';
-// const API_URL_WIDGET = 'http://people.loc/';
+const API_URL = 'http://people.loc/';
+const API_URL_WIDGET = 'http://people.loc/';
 
 function getShorty($string, $count_words) {
     var shorty = $string.split(" ", $count_words);

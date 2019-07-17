@@ -6,6 +6,12 @@ body {
     line-height: inherit!important;
 }
 
+@media (max-width: 998px) and (min-width: 280px){
+    body {
+        font-size: 12px!important;
+    }
+}
+
 .row-flex {
     display: flex;
     flex-flow: row wrap;

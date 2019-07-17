@@ -89,8 +89,10 @@ $this->pageTitle=Yii::app()->name;
                         <span class="no" id="firstname-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
                 </div>
-                <span class="tooltip-custom tooltip-info hidden" id="firstname-info-view"></span>
-                <span class="tooltip-custom tooltip-info yes hidden" id="firstname-info-save">Successfully saved!</span>
+                <div class="col-md-12">
+                    <span class="tooltip-custom tooltip-info hidden" id="firstname-info-view"></span>
+                    <span class="tooltip-custom tooltip-info yes hidden" id="firstname-info-save">Successfully saved!</span>
+                </div>
             </td>
             <td class="col-md-1">
                 <div class="icons icons-view">
@@ -177,14 +179,14 @@ $this->pageTitle=Yii::app()->name;
             </td>
         </tr>
         <tr>
-            <td class="col-md-11">
+            <td class="col-sm-11">
                 <div class="w-100">
-                    <div class="col-sm-4">
+                    <div class="col-sm-2">
                         <label for="">Date of Birth</label>
                     </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="birth-view text-center">
-                            <div class="col-md-6 nopadding">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="birth-view">
+                            <div class="col-xs-6 nopadding">
                                 <?php if($guest): ?>
                                     <span id="b-month-1-restricted" class="danger">Restricted</span>
                                 <?php else: ?>
@@ -192,18 +194,18 @@ $this->pageTitle=Yii::app()->name;
                                 <?php endif;?>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
-                            <div class="col-md-3 nopadding">
+                            <div class="col-xs-3 nopadding">
                                 <span id="b-date-1">06</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
-                            <div class="col-md-3 nopadding">
+                            <div class="col-xs-3 nopadding">
                                 <span id="b-year-1">July</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
                         </div>
                         <div class="birth-edit hidden">
                             <div class="row">
-                                <div class="col-md-6 margin-select">
+                                <div class="col-sm-6 margin-select">
                                     <select class="form-control padding-select form-control-custom form-control-select" name="month" id="month">
                                         <option value>Month</option>
                                         <option value="1">January</option>
@@ -220,7 +222,7 @@ $this->pageTitle=Yii::app()->name;
                                         <option value="12">December</option>
                                     </select>
                                 </div>
-                                <div class="col-md-3 margin-select">
+                                <div class="col-sm-3 margin-select">
                                     <select class="form-control form-control-custom form-control-select" name="day" id="day">
                                         <option value="">Day</option>
                                         <option value="1">01</option>
@@ -256,7 +258,7 @@ $this->pageTitle=Yii::app()->name;
                                         <option value="31">31</option>
                                     </select>
                                 </div>
-                                <div class="col-md-3 pl-0 margin-select">
+                                <div class="col-sm-3 pl-0 margin-select">
                                     <select id="year" class="form-control form-control-custom form-control-select" name="year">
                                         <option value="">Year</option>
                                         <?php for($i = 2004; $i >= 1920; $i--): ?>
@@ -276,12 +278,12 @@ $this->pageTitle=Yii::app()->name;
                         <span class="no" id="birthday-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
                 </div>
-                <div class="col-md-12">
+                <div class="col-sm-12">
                     <span class="tooltip-custom tooltip-info hidden" id="birth-info-view"></span>
                     <span class="tooltip-custom tooltip-info yes hidden" id="birth-info-save">Successfully saved!</span>
                 </div>
             </td>
-            <td class="col-md-1">
+            <td class="col-sm-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>

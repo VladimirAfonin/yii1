@@ -590,6 +590,8 @@ $('#firstname-save').on('click', function(e){
            $('#firstname-close').trigger('click');
            commitData();
            $('#f-name-change').addClass('hidden');
+           $('#firstname-info-view').toggleClass('hidden').toggleClass('active-info');
+           $('#firstname-info-save').removeClass('hidden').fadeOut(3000);
        },
        error: function(res) {
            console.log(res);
@@ -624,6 +626,8 @@ $('#nickname-save').on('click', function(e){
             $('#nickname-1').html(nickName);
             commitData();
             $('#nickname-close').trigger('click');
+            $('#nickname-info-view').toggleClass('hidden').toggleClass('active-info');
+            $('#nickname-info-save').removeClass('hidden').fadeOut(3000);
         },
         error: function(res) {
             console.log(res);
@@ -755,6 +759,8 @@ $('#birth-save').on('click', function(e){
             $('#b-year-1').html(year);
             commitData();
             $('#birth-close').trigger('click');
+            $('#birth-info-view').toggleClass('hidden').toggleClass('active-info');
+            $('#birth-info-save').removeClass('hidden').fadeOut(3000);
         },
         error: function(res) {
             console.log(res);
@@ -803,6 +809,8 @@ $('#aboutme-save').on('click', function(e){
             commitData();
             $('#aboutme-close').trigger('click');
             $('#aboutme-name-change').addClass('hidden');
+            $('#aboutme-info-view').toggleClass('hidden').toggleClass('active-info');
+            $('#aboutme-info-save').removeClass('hidden').fadeOut(3000);
         },
         error: function(res) {
             console.log(res);
@@ -854,6 +862,8 @@ $('#relation-save').on('click', function(e){
             $('#relation-1').html(relations[relationStatus]['label']);
             commitData();
             $('#relation-close').trigger('click');
+            $('#relation-info-view').toggleClass('hidden').toggleClass('active-info');
+            $('#relation-info-save').removeClass('hidden').fadeOut(3000);
         },
         error: function(res) {
             console.log(res);

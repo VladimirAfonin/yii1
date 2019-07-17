@@ -90,6 +90,7 @@ $this->pageTitle=Yii::app()->name;
                     </span>
                 </div>
                 <span class="tooltip-custom tooltip-info hidden" id="firstname-info-view"></span>
+                <span class="tooltip-custom tooltip-info yes hidden" id="firstname-info-save">Successfully saved!</span>
             </td>
             <td class="col-md-1">
                 <div class="icons icons-view">
@@ -137,6 +138,7 @@ $this->pageTitle=Yii::app()->name;
                <div class="w-100 text-left col-md-12">
                     <span class="tooltip-custom tooltip-info hidden w-100" id="nickname-info-view"></span
                 </div>
+                <span class="tooltip-custom tooltip-info yes hidden" id="nickname-info-save">Successfully saved!</span>
             </td>
             <td class="col-md-1">
                 <div class="icons icons-view">
@@ -276,6 +278,7 @@ $this->pageTitle=Yii::app()->name;
                 </div>
                 <div class="col-md-12">
                     <span class="tooltip-custom tooltip-info hidden" id="birth-info-view"></span>
+                    <span class="tooltip-custom tooltip-info yes hidden" id="birth-info-save">Successfully saved!</span>
                 </div>
             </td>
             <td class="col-md-1">
@@ -326,6 +329,7 @@ $this->pageTitle=Yii::app()->name;
                 </div>
                 <div class="col-md-12">
                     <span class="tooltip-custom tooltip-info hidden" id="aboutme-info-view"></span>
+                    <span class="tooltip-custom tooltip-info yes hidden" id="aboutme-info-save">Successfully saved!</span>
                 </div>
             </td>
             <td class="col-md-1">
@@ -381,6 +385,7 @@ $this->pageTitle=Yii::app()->name;
                 </div>
                 <div class="col-md-12">
                     <span class="tooltip-custom tooltip-info hidden" id="relation-info-view"></span>
+                    <span class="tooltip-custom tooltip-info yes hidden" id="relation-info-save">Successfully saved!</span>
                 </div>
             </td>
             <td class="col-md-1">

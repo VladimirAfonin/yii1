@@ -104,7 +104,6 @@ $.ajax({
             widgetStatus = false;
             $('.people-info').remove();
         }
-        console.log(res);
     },
     false: function(res) {
         console.log('error');

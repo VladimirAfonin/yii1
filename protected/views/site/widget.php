@@ -199,7 +199,7 @@ $this->pageTitle=Yii::app()->name;
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
                             <div class="col-xs-3 nopadding">
-                                <span id="b-year-1">July</span>
+                                <span id="b-year-1" style="padding-left: 7px;!important;">1989</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock"></span>
                             </div>
                         </div>
@@ -222,7 +222,7 @@ $this->pageTitle=Yii::app()->name;
                                         <option value="12">December</option>
                                     </select>
                                 </div>
-                                <div class="col-sm-3 margin-select">
+                                <div class="col-sm-3 margin-select day">
                                     <select class="form-control form-control-custom form-control-select" name="day" id="day">
                                         <option value="">Day</option>
                                         <option value="1">01</option>
@@ -258,7 +258,7 @@ $this->pageTitle=Yii::app()->name;
                                         <option value="31">31</option>
                                     </select>
                                 </div>
-                                <div class="col-sm-3 pl-0 margin-select">
+                                <div class="col-sm-3 pl-0 margin-select year">
                                     <select id="year" class="form-control form-control-custom form-control-select" name="year">
                                         <option value="">Year</option>
                                         <?php for($i = 2004; $i >= 1920; $i--): ?>

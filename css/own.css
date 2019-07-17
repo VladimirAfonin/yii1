@@ -165,4 +165,14 @@ table#widget-table tr:hover span.show-actions {
     font-size: 16px;
 }
 
+@media (min-width: 768px) {
+    .day {
+        padding-left: 0!important;
+    }
+
+    .year {
+        padding-left: 0!important;
+    }
+}
+
 

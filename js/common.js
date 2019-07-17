@@ -121,6 +121,7 @@ if(widgetStatus) {
             // console.log(res);
             if(res) {
                 var user = res;
+
                 $('#firstname-1').html(res['first_name']);
                 $('#fname-input').val(res['first_name']);
 
@@ -132,6 +133,14 @@ if(widgetStatus) {
 
                 $('#nickname-1').html(res['nick_name']);
                 $('#nickname-input').val(res['nick_name']);
+
+                $('#firstname-info-view').html(res['first_name_info']);
+                $('#nickname-info-view').html(res['nickname_name_info']);
+                $('#mylokal-info-view').html(res['local_user_id_info']);
+                $('#birth-info-view').html(res['date_of_birth_info']);
+                $('#aboutme-info-view').html(res['aboutme_info']);
+                $('#relation-info-view').html(res['relation_info']);
+                $('#keywords-info-view').html(res['keywords_info']);
 
                 // date of birth
                 var date_birth_timestamp = res['date_birth'];
@@ -169,6 +178,63 @@ if(widgetStatus) {
 }
 
 
+// show info
+$('#firstname-info').on('click', function(e){
+    if($('#firstname-info-view').hasClass('active-info')){
+        $('#firstname-info-view').toggleClass('hidden').toggleClass('active-info');
+    } else {
+        $('.active-info').addClass('hidden').removeClass('active-info');
+        $('#firstname-info-view').toggleClass('hidden').addClass('active-info');
+    }
+});
+$('#nickname-info').on('click', function(e){
+    if($('#nickname-info-view').hasClass('active-info')){
+        $('#nickname-info-view').toggleClass('hidden').toggleClass('active-info');
+    } else {
+        $('.active-info').addClass('hidden').removeClass('active-info');
+        $('#nickname-info-view').toggleClass('hidden').addClass('active-info');
+    }
+});
+$('#mylocal-info').on('click', function(e){
+    if($('#mylokal-info-view').hasClass('active-info')){
+        $('#mylokal-info-view').toggleClass('hidden').toggleClass('active-info');
+    } else {
+        $('.active-info').addClass('hidden').removeClass('active-info');
+        $('#mylokal-info-view').toggleClass('hidden').addClass('active-info');
+    }
+});
+$('#birth-info').on('click', function(e){
+    if($('#birth-info-view').hasClass('active-info')){
+        $('#birth-info-view').toggleClass('hidden').toggleClass('active-info');
+    } else {
+        $('.active-info').addClass('hidden').removeClass('active-info');
+        $('#birth-info-view').toggleClass('hidden').addClass('active-info');
+    }
+});
+$('#aboutme-info').on('click', function(e){
+    if($('#aboutme-info-view').hasClass('active-info')){
+        $('#aboutme-info-view').toggleClass('hidden').toggleClass('active-info');
+    } else {
+        $('.active-info').addClass('hidden').removeClass('active-info');
+        $('#aboutme-info-view').toggleClass('hidden').addClass('active-info');
+    }
+});
+$('#relation-info').on('click', function(e){
+    if($('#relation-info-view').hasClass('active-info')){
+        $('#relation-info-view').toggleClass('hidden').toggleClass('active-info');
+    } else {
+        $('.active-info').addClass('hidden').removeClass('active-info');
+        $('#relation-info-view').toggleClass('hidden').addClass('active-info');
+    }
+});
+$('#keywords-info').on('click', function(e){
+    if($('#keywords-info-view').hasClass('active-info')){
+        $('#keywords-info-view').toggleClass('hidden').toggleClass('active-info');
+    } else {
+        $('.active-info').addClass('hidden').removeClass('active-info');
+        $('#keywords-info-view').toggleClass('hidden').addClass('active-info');
+    }
+});
 
 // firstname
 $('#firstname-edit').on('click', function(e){

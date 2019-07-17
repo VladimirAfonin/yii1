@@ -88,8 +88,8 @@ $this->pageTitle=Yii::app()->name;
                         <span class="yes" id="firstname-yes"><i class="fa fa-check"></i></span>
                         <span class="no" id="firstname-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
-                    <span class="tooltip-custom tooltip-info hidden">You can display your names differently to different users. #71</span>
                 </div>
+                <span class="tooltip-custom tooltip-info hidden" id="firstname-info-view"></span>
             </td>
             <td class="col-md-1">
                 <div class="icons icons-view">
@@ -128,8 +128,14 @@ $this->pageTitle=Yii::app()->name;
                         </div>
                     </div>
                     <span class="confirmation hidden" id="n-name-change">Current changes not yet saved. Are you sure want to cancel this change?
-                    <span class="yes" id="nickname-yes"><i class="fa fa-check"></i></span>
-                    <span class="no" id="nickname-cancel-no"><i class="fa fa-close"></i></span>
+                        <span class="yes" id="nickname-yes"><i class="fa fa-check"></i></span>
+                        <span class="no" id="nickname-cancel-no"><i class="fa fa-close"></i></span>
+                    </span>
+                </div>
+                <div class="clear">
+                </div>
+               <div class="w-100 text-left col-md-12">
+                    <span class="tooltip-custom tooltip-info hidden w-100" id="nickname-info-view"></span
                 </div>
             </td>
             <td class="col-md-1">
@@ -155,14 +161,15 @@ $this->pageTitle=Yii::app()->name;
                     <div class="col-md-8">
                         <div class="userid-view">bala_balak</div>
                     </div>
-                    <span class="tooltip-info">
-                    </span>
+                </div>
+                <div class="col-md-12">
+                    <span class="tooltip-custom tooltip-info hidden" id="mylokal-info-view"></span
                 </div>
             </td>
             <td class="col-md-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <span class="fa fa-info-circle  show-actions" title="Info"></span>
+                        <span class="fa fa-info-circle  show-actions" id="mylocal-info" title="Info"></span>
                     </div>
                 </div>
             </td>
@@ -266,7 +273,9 @@ $this->pageTitle=Yii::app()->name;
                         <span class="yes" id="birthday-yes"><i class="fa fa-check"></i></span>
                         <span class="no" id="birthday-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
-                    <span class="tooltip-info"></span>
+                </div>
+                <div class="col-md-12">
+                    <span class="tooltip-custom tooltip-info hidden" id="birth-info-view"></span>
                 </div>
             </td>
             <td class="col-md-1">
@@ -315,9 +324,9 @@ $this->pageTitle=Yii::app()->name;
                         <span class="no" id="aboutme-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
                 </div>
-                <span class="tooltip-custom tooltip-info hidden">
-                    Your brief Introduction to MyLokal Community #79
-                </span>
+                <div class="col-md-12">
+                    <span class="tooltip-custom tooltip-info hidden" id="aboutme-info-view"></span>
+                </div>
             </td>
             <td class="col-md-1">
                 <div class="icons icons-view">
@@ -370,9 +379,9 @@ $this->pageTitle=Yii::app()->name;
                         <span class="no" id="relation-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
                 </div>
-                <span class="tooltip-custom tooltip-info hidden">
-                    Your brief Introduction to MyLokal Community #79
-                </span>
+                <div class="col-md-12">
+                    <span class="tooltip-custom tooltip-info hidden" id="relation-info-view"></span>
+                </div>
             </td>
             <td class="col-md-1">
                 <div class="icons icons-view">
@@ -409,9 +418,9 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                         </div>
                     </div>
-                    <span class="tooltip-custom tooltip-info hidden">
-                        Your brief Introduction to MyLokal Community #79
-                    </span>
+                </div>
+                <div class="col-md-12">
+                     <span class="tooltip-custom tooltip-info hidden" id="keywords-info-view">
                 </div>
             </td>
             <td class="col-md-1">

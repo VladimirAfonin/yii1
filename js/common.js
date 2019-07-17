@@ -1,10 +1,10 @@
 $('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();
 
-const API_URL_WIDGET = 'https://api.myshkinaradost.ru/';
-const API_URL = 'https://api.myshkinaradost.ru/'; // todo: change this line
-
-// const API_URL = 'http://people.loc/';
-// const API_URL_WIDGET = 'http://people.loc/';
+// const API_URL_WIDGET = 'https://api.myshkinaradost.ru/';
+// const API_URL = 'https://api.myshkinaradost.ru/'; // todo: change this line
+//
+const API_URL = 'http://people.loc/';
+const API_URL_WIDGET = 'http://people.loc/';
 
 function getShorty($string, $count_words) {
     var shorty = $string.split(" ", $count_words);
@@ -238,10 +238,7 @@ $('#keywords-info').on('click', function(e){
 });
 
 // firstname
-$('#firstname-edit').on('click', function(e){
-    if(!$('#firstname-info-view').hasClass('active-info')){
-        $('#firstname-info').trigger('click');
-    }
+$('#firstname-edit, .firstname-view, .middlename-view, .lastname-view').on('click', function(e){
 
     // firstNameFlag = true;
     getCurrentData();
@@ -263,6 +260,10 @@ $('#firstname-edit').on('click', function(e){
         } else {
             $('#f-name-change').addClass('hidden');
         }
+    }
+
+    if(!$('#firstname-info-view').hasClass('active-info')){
+        $('#firstname-info').trigger('click');
     }
 
     // $('#f-name-change').addClass('hidden');
@@ -344,10 +345,7 @@ $('#lastname-edit').on('click', function(e){
 });
 
 // nickname
-$('#nickname-edit').on('click', function(e){
-    if(!$('#nickname-info-view').hasClass('active-info')){
-        $('#nickname-info').trigger('click');
-    }
+$('#nickname-edit, .nickname-view').on('click', function(e){
 
     // nickNameFlag = true;
     getCurrentData();
@@ -379,6 +377,10 @@ $('#nickname-edit').on('click', function(e){
         }
     }
 
+    if(!$('#nickname-info-view').hasClass('active-info')){
+        $('#nickname-info').trigger('click');
+    }
+
     $('.active').trigger('click');
     $('#nickname-close').addClass('active');
     $('#nickname-info, #nickname-edit').addClass('hidden');
@@ -388,7 +390,8 @@ $('#nickname-edit').on('click', function(e){
 
 var nickNameFlag = true;
 $('#nickname-close').on('click', function(e){
-    $('#nickname-info').trigger('click');
+    $('#nickname-info-view').addClass('hidden').removeClass('active-info');
+    // $('#nickname-info').trigger('click');
     $('#n-name-change').addClass('hidden');
 
     $('#nickname-close').removeClass('active');
@@ -398,10 +401,7 @@ $('#nickname-close').on('click', function(e){
 });
 
 // relation status
-$('#relation-edit').on('click', function(e){
-    if(!$('#relation-info-view').hasClass('active-info')){
-        $('#relation-info').trigger('click');
-    }
+$('#relation-edit, #relation-1').on('click', function(e){
 
     // relationFlag = true;
     getCurrentData();
@@ -433,6 +433,10 @@ $('#relation-edit').on('click', function(e){
         }
     }
 
+    if(!$('#relation-info-view').hasClass('active-info')){
+        $('#relation-info').trigger('click');
+    }
+
     $('.active').trigger('click');
     $('#relation-close').addClass('active');
     $('#relation-info, #relation-edit').addClass('hidden');
@@ -451,12 +455,8 @@ $('#relation-close').on('click', function(e){
 });
 
 // date of birth
-$('#birth-edit').on('click', function(e){
-    if(!$('#birth-info-view').hasClass('active-info')){
-        $('#birth-info').trigger('click');
-    }
+$('#birth-edit, #b-month-1, #b-date-1, #b-year-1 ').on('click', function(e){
 
-    $('#b-month-1, #month-lock, #b-date-1, #day-lock, #b-year-1, #year-lock').addClass('hidden');
 
     // birthFlag = true;
     getCurrentData();
@@ -488,6 +488,12 @@ $('#birth-edit').on('click', function(e){
         }
     }
 
+    $('#b-month-1, #month-lock, #b-date-1, #day-lock, #b-year-1, #year-lock').addClass('hidden');
+
+    if(!$('#birth-info-view').hasClass('active-info')){
+        $('#birth-info').trigger('click');
+    }
+
     $('.active').trigger('click');
     $('#birth-close').addClass('active').css('opacity', 1);;
     $('#birth-info, #birth-edit').addClass('hidden');
@@ -507,10 +513,7 @@ $('#birth-close').on('click', function(e){
 });
 
 // about me
-$('#aboutme-edit').on('click', function(e){
-    if(!$('#aboutme-info-view').hasClass('active-info')){
-        $('#aboutme-info').trigger('click');
-    }
+$('#aboutme-edit, #aboutme-1').on('click', function(e){
 
     // aboutmeFlag = true;
     getCurrentData();
@@ -542,6 +545,9 @@ $('#aboutme-edit').on('click', function(e){
         }
     }
 
+    if(!$('#aboutme-info-view').hasClass('active-info')){
+        $('#aboutme-info').trigger('click');
+    }
 
     $('.active').trigger('click');
     $('#aboutme-close').addClass('active').css('opacity', 1);;

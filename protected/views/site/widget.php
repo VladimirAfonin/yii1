@@ -186,21 +186,21 @@ $this->pageTitle=Yii::app()->name;
                     </div>
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="birth-view">
-                            <div class="col-xs-6 nopadding">
+                            <div class="col-xs-6 nopadding" id="">
                                 <?php if($guest): ?>
                                     <span id="b-month-1-restricted" class="danger">Restricted</span>
                                 <?php else: ?>
                                     <span id="b-month-1">July</span>
                                 <?php endif;?>
-                                <span style="color: #3b5998;" class="icons fa fa-lock"></span>
+                                <span style="color: #3b5998;" class="icons fa fa-lock" id="month-lock"></span>
                             </div>
                             <div class="col-xs-3 nopadding">
                                 <span id="b-date-1">06</span>
-                                <span style="color: #3b5998;" class="icons fa fa-lock"></span>
+                                <span style="color: #3b5998;" class="icons fa fa-lock" id="day-lock"></span>
                             </div>
                             <div class="col-xs-3 nopadding">
                                 <span id="b-year-1" style="padding-left: 7px;!important;">1989</span>
-                                <span style="color: #3b5998;" class="icons fa fa-lock"></span>
+                                <span style="color: #3b5998;" class="icons fa fa-lock" id="year-lock"></span>
                             </div>
                         </div>
                         <div class="birth-edit hidden">

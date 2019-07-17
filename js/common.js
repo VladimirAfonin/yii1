@@ -438,6 +438,8 @@ $('#relation-close').on('click', function(e){
 
 // date of birth
 $('#birth-edit').on('click', function(e){
+    $('#b-month-1, #month-lock, #b-date-1, #day-lock, #b-year-1, #year-lock').addClass('hidden');
+
     // birthFlag = true;
     getCurrentData();
 
@@ -476,6 +478,8 @@ $('#birth-edit').on('click', function(e){
 
 var birthFlag = true;
 $('#birth-close').on('click', function(e){
+    $('#b-month-1, #month-lock, #b-date-1, #day-lock, #b-year-1, #year-lock').removeClass('hidden');
+
     $('#b-name-change').addClass('hidden');
 
     $('#birth-close').removeClass('active');
@@ -727,6 +731,8 @@ $('#firstname-cancel-no').on('click', function(e){
 
 // save date of birth
 $('#birth-save').on('click', function(e){
+    $('#b-month-1, #month-lock, #b-date-1, #day-lock, #b-year-1, #year-lock').removeClass('hidden');
+
     var month = $('#month').val();
     var day = $('#day').val();
     var year = $('#year').val();
@@ -778,6 +784,8 @@ $('#birth-save').on('click', function(e){
 
 // cancel birth
 $('#birthday-yes').on('click', function(e) {
+    $('#b-month-1, #month-lock, #b-date-1, #day-lock, #b-year-1, #year-lock').removeClass('hidden');
+
     $('#b-name-change').addClass('hidden');
     $('#month').val(savedData[4]['#month']);
     $('#day').val(savedData[6]['#day']);

@@ -23,7 +23,7 @@ $this->pageTitle=Yii::app()->name;
                                 <span id="firstname-1">
                                     Restricted
                                 </span>
-                                <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
+                                <span style="color: #c00;" class="icons fa fa-lock privacy_icon" id="firstname-lock"></span>
                                 <?php if(!$guest): ?>
                                     <span class="fa fa-edit" id="firstname-edit"></span>
                                 <?php endif; ?>
@@ -48,7 +48,7 @@ $this->pageTitle=Yii::app()->name;
                                                 Restricted
                                             </span>
                                         <?php endif; ?>
-                                        <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
+                                        <span style="color: #c00;" class="icons fa fa-lock privacy_icon" id="middlename-lock"></span>
                                         <?php if(!$guest): ?>
                                             <span class="fa fa-edit" id="middlename-edit"></span>
                                         <?php endif; ?>
@@ -71,7 +71,7 @@ $this->pageTitle=Yii::app()->name;
                                                 Restricted
                                             </span>
                                         <?php endif; ?>
-                                        <span style="color: #c00;" class="icons fa fa-lock privacy_icon"></span>
+                                        <span style="color: #c00;" class="icons fa fa-lock privacy_icon" id="lastname-lock"></span>
                                         <?php if(!$guest): ?>
                                             <span class="fa fa-edit" id="lastname-edit"></span>
                                         <?php endif; ?>
@@ -122,7 +122,7 @@ $this->pageTitle=Yii::app()->name;
                                     Restricted
                                 </span>
                                 <?php endif; ?>
-                                <span class="icons fa fa-lock" style="color: #3b5998;"></span>
+                                <span class="icons fa fa-lock" style="color: #3b5998;" id="nickname-lock"></span>
                             </div>
                             <div class="nickname-edit hidden">
                                 <input class="form-control form-control-custom required" id="nickname-input" maxlength="25" placeholder="nick name" type="text" value="">
@@ -305,7 +305,7 @@ $this->pageTitle=Yii::app()->name;
                     <div class="col-md-8">
                         <div class="aboutme-view">
                             <span id="aboutme-1">This is all about how great I am at this site.....</span>
-                            <span class="icons fa fa-lock privacy_icon"></span>
+                            <span class="icons fa fa-lock privacy_icon" id="aboutme-lock"></span>
                         </div>
                         <div class="aboutme-edit hidden">
                             <textarea class="form-control form-control-textarea required"
@@ -360,7 +360,7 @@ $this->pageTitle=Yii::app()->name;
                             <?php else: ?>
                                 <span id="relation-1">July</span>
                             <?php endif;?>
-                            <span class="icons fa fa-lock" style="color: #3b5998;"></span>
+                            <span class="icons fa fa-lock" style="color: #3b5998;" id="relation-lock"></span>
                         </div>
                         <div class="relation-edit hidden">
                             <select id="relationStatus" class="form-control form-control-select filter-select" name="relationStatus">

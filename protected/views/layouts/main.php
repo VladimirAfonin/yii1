@@ -55,7 +55,7 @@
             </div>
             <div class="p-0 w-100 col-lg-6 col-md-6 col-sm-8 col-xs-12" style="border: 1px solid gray;">
                <div class=" col-lg-12 col-xs-12 col-md-12 container-custom">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-block-height text-center" style="border: 1px solid gray">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-block-height text-center no-line" style="border: 1px solid gray">
                         <span class="blocks" style="color: #000;">CENTER BLOCK</span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #fff!important;">

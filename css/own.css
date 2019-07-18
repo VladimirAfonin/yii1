@@ -13,6 +13,10 @@ body {
 }
 
 @media (max-width: 750px) {
+    .no-line {
+        border: none!important;
+    }
+
     .col-xs-5 {
         padding-left: 0!important;
         padding-right: 0!important;
@@ -54,6 +58,10 @@ body {
     }
 }
 
+
+.middle-edit {
+    padding-right:3px!important;
+}
 
 .row-flex {
     display: flex;
@@ -156,10 +164,6 @@ body {
     .pl-0 {
         padding-left: 15px!important;
     }
-}
-
-.middle-edit {
-    padding-right:3px!important;
 }
 
 

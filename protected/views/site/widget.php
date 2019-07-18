@@ -34,7 +34,7 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-7 col-sm-8 no-p-l">
+                    <div class="col-xs-7 col-sm-8">
                         <div class="w-100">
                             <div class="col-xs-6 nopadding">
                                 <div class="middlename">
@@ -105,7 +105,7 @@ $this->pageTitle=Yii::app()->name;
             </td>
         </tr>
         <tr>
-            <td class="col-xs-8">
+            <td class="col-xs-11">
                 <div class="w-100">
                     <div class="col-xs-5 col-sm-4">
                         <label for="">Nick Name</label>
@@ -137,12 +137,12 @@ $this->pageTitle=Yii::app()->name;
                 </div>
                 <div class="clear">
                 </div>
-               <div class="w-100 text-left col-md-12">
+               <div class="w-100 text-left col-xs-12">
                     <span class="tooltip-custom tooltip-info hidden w-100" id="nickname-info-view"></span
                 </div>
                 <span class="tooltip-custom tooltip-info yes hidden" id="nickname-info-save">Successfully saved!</span>
             </td>
-            <td class="col-xs-4">
+            <td class="col-xs-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
@@ -387,7 +387,7 @@ $this->pageTitle=Yii::app()->name;
                         <span class="no" id="relation-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
                 </div>
-                <div class="col-md-12">
+                <div class="col-xs-12">
                     <span class="tooltip-custom tooltip-info hidden" id="relation-info-view"></span>
                     <span class="tooltip-custom tooltip-info yes hidden" id="relation-info-save">Successfully saved!</span>
                 </div>

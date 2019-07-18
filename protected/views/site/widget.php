@@ -79,6 +79,7 @@ $this->pageTitle=Yii::app()->name;
                                     <div class="lastname-edit hidden">
                                         <input class="form-control form-control-custom required" id="lastname-input" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
                                         <span class="danger hidden" id="l-name-error">Last Name cannot be left blank</span>
+                                        <span class="danger hidden" id="l-name-error-size">Maximum 9 characters are allowed</span>
                                     </div>
                                 </div>
                             </div>

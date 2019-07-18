@@ -11,11 +11,12 @@ function getShorty($string, $count_words) {
     return shorty.join(' ', shorty).concat('...');
 }
 function getShortySymbol($string, $count_symbols) {
-    var sliced = $string.slice(0, $count_symbols);
-    if((16 - sliced.length) >= 5) {
+    if($string.length > $count_symbols) {
+        var sliced = $string.slice(0, $count_symbols - 2);
         sliced += '..';
+        return sliced;
     }
-    return sliced;
+    return $string;
 }
 
 function content_length() {
@@ -135,13 +136,18 @@ if(widgetStatus) {
                 $('#middlename-1').html(res['middle_name']);
                 $('#middlename-input').val(res['middle_name']);
 
-                if($(window).width() <= 440) {
-                    $('#lastname-1').html(getShortySymbol(res['last_name'], 5));
+                if($(window).width() <= 300) {
+                    $('#lastname-1').html(getShortySymbol(res['last_name'], 4));
+                } else if($(window).width() <= 440) {
+                    $('#lastname-1').html(getShortySymbol(res['last_name'], 6));
                 } else if($(window).width() <= 650) {
                     $('#lastname-1').html(getShortySymbol(res['last_name'], 11));
+                } else if($(window).width() >= 651) {
+                    $('#lastname-1').html(getShortySymbol(res['last_name'], 13));
                 } else {
                     $('#lastname-1').html(res['last_name']);
                 }
+
                 $('#lastname-input').val(res['last_name']);
 
                 $('#nickname-1').html(res['nick_name']);
@@ -645,11 +651,20 @@ $('#firstname-save').on('click', function(e){
     }
      if(lastName.length === 0) {
         $('.lastname-edit').removeClass('hidden');
+        $('#l-name-error-size').addClass('hidden');
         $('#l-name-error').removeClass('hidden');
         return false;
-    } else {
+    }
+    /*else if(lastName.length > 9) {
+         $('.lastname-edit').removeClass('hidden');
+         $('#l-name-error').addClass('hidden');
+         $('#l-name-error-size').removeClass('hidden');
+         return false;
+     } */
+     else {
          $('.lastname-edit').addClass('hidden');
          $('#l-name-error').addClass('hidden');
+         $('#l-name-error-size').addClass('hidden');
      }
 
    $.ajax({
@@ -666,22 +681,33 @@ $('#firstname-save').on('click', function(e){
            firstNameFlag = true;
            $('#firstname-1').html(fname);
            $('#middlename-1').html(middleName);
+           // $('#lastname-1').html(lastName);
 
-           if($(window).width() <= 440) {
-               $('#lastname-1').html(getShortySymbol(lastName, 5));
+           if($(window).width() <= 300) {
+               $('#lastname-1').html(getShortySymbol(lastName, 4));
+           } else if($(window).width() <= 440) {
+               $('#lastname-1').html(getShortySymbol(lastName, 6));
            } else if($(window).width() <= 650) {
                $('#lastname-1').html(getShortySymbol(lastName, 11));
+           } else if($(window).width() >= 651) {
+               $('#lastname-1').html(getShortySymbol(lastName, 13));
            } else {
-               $('#lastname-1').html(res['last_name']);
+               $('#lastname-1').html(lastName);
            }
 
            $('#firstname-close').trigger('click');
+
+           $('#fname-input').val(fname);
+           $('#middlename-input').val(middleName);
+           $('#lastname-input').val(lastName);
+
            commitData();
            $('#f-name-change').addClass('hidden');
            $('#firstname-info-view').addClass('hidden').removeClass('active-info');
            $('#firstname-info-save').removeClass('hidden').fadeOut(3000, function(){
                $('#firstname-info-save').addClass('hidden').css('display', 'block');
            });
+
        },
        error: function(res) {
            console.log(res);

@@ -17,7 +17,7 @@ $this->pageTitle=Yii::app()->name;
         <tr>
             <td class="col-xs-11">
                 <div class="w-100">
-                    <div class="col-md-4">
+                    <div class="col-xs-5 col-sm-4">
                         <div class="firstname">
                             <div class="firstname-view">
                                 <span id="firstname-1">
@@ -34,9 +34,9 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-xs-7 col-sm-8 no-p-l">
                         <div class="w-100">
-                            <div class="col-md-6 nopadding">
+                            <div class="col-xs-6 nopadding">
                                 <div class="middlename">
                                     <div class="middlename-view">
                                         <?php if($guest) : ?>
@@ -59,7 +59,7 @@ $this->pageTitle=Yii::app()->name;
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 nopadding">
+                            <div class="col-xs-6 nopadding">
                                 <div class="lastname">
                                     <div class="lastname-view">
                                         <?php if($guest) : ?>
@@ -89,7 +89,7 @@ $this->pageTitle=Yii::app()->name;
                         <span class="no" id="firstname-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
                 </div>
-                <div class="col-md-12">
+                <div class="col-xs-12">
                     <span class="tooltip-custom tooltip-info hidden" id="firstname-info-view"></span>
                     <span class="tooltip-custom tooltip-info yes hidden" id="firstname-info-save">Successfully saved!</span>
                 </div>
@@ -184,7 +184,7 @@ $this->pageTitle=Yii::app()->name;
                     <div class="col-xs-2 col-sm-2 all-width">
                         <label for="">Date of Birth</label>
                     </div>
-                    <div class="col-xs-7 col-xs-offset-3 col-sm-8 col-sm-offset-2 no-offset">
+                    <div class="col-xs-7 col-xs-offset-3 col-sm-8 col-sm-offset-2 no-offset all-width">
                         <div class="birth-view no-offset no-p-l">
                             <div class="col-xs-4 nopadding" id="">
                                 <?php if($guest): ?>

@@ -22,7 +22,7 @@ body {
     }
 
     .col-xs-12, .col-xs-2 {
-        padding-left: 4px!important;
+        padding-left: 6px!important;
         padding-right: 4px!important;
     }
 
@@ -158,6 +158,9 @@ body {
     }
 }
 
+.middle-edit {
+    padding-right:3px!important;
+}
 
 
 /*.middle-screen-padding-left {

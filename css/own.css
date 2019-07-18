@@ -6,11 +6,54 @@ body {
     line-height: inherit!important;
 }
 
-@media (max-width: 998px) and (min-width: 280px){
+@media (max-width: 998px) and (min-width: 240px){
     body {
-        font-size: 12px!important;
+        font-size: 11px!important;
     }
 }
+
+@media (max-width: 750px) {
+    .col-xs-5 {
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .col-xs-7 {
+        padding-right: 0!important;
+    }
+
+    .col-xs-12, .col-xs-2 {
+        padding-left: 4px!important;
+        padding-right: 4px!important;
+    }
+
+    .col-xs-offset-2{
+        margin-left: 0 !important;
+    }
+    .col-xs-2 {
+        padding: 0!important;
+    }
+}
+
+@media (max-width: 580px) {
+    .col-xs-4, .col-xs-3 {
+        padding: 0!important;
+    }
+    .all-width {
+        width: 100%!important;
+    }
+
+    .no-offset {
+        margin-left: 0%!important;
+    }
+
+    .no-p-l {
+        padding-left:0!important;
+    }
+    .margin-left-min {
+        margin-left: -14px;
+    }
+}
+
 
 .row-flex {
     display: flex;
@@ -95,7 +138,7 @@ body {
     padding: 0!important;
 }
 
-@media(min-width: 300px){
+@media(min-width: 250px){
     .nopadding {
         padding: 0!important;
     }
@@ -132,6 +175,7 @@ body {
 
 .icons-view {
     opacity: 1;
+    white-space: nowrap;
 }
 .fa-close, .fa-trash {
     color: red;
@@ -174,5 +218,7 @@ table#widget-table tr:hover span.show-actions {
         padding-left: 0!important;
     }
 }
+
+
 
 

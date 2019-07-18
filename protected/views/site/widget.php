@@ -15,7 +15,7 @@ $this->pageTitle=Yii::app()->name;
         </thead>
         <tbody>
         <tr>
-            <td class="col-md-11">
+            <td class="col-xs-11">
                 <div class="w-100">
                     <div class="col-md-4">
                         <div class="firstname">
@@ -94,7 +94,7 @@ $this->pageTitle=Yii::app()->name;
                     <span class="tooltip-custom tooltip-info yes hidden" id="firstname-info-save">Successfully saved!</span>
                 </div>
             </td>
-            <td class="col-md-1">
+            <td class="col-xs-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <span data-toggle="tooltip" title="Save" id="firstname-save" class="fa fa-save hidden"></span>
@@ -105,13 +105,13 @@ $this->pageTitle=Yii::app()->name;
             </td>
         </tr>
         <tr>
-            <td class="col-md-11">
+            <td class="col-xs-8">
                 <div class="w-100">
-                    <div class="col-md-4">
+                    <div class="col-xs-5 col-sm-4">
                         <label for="">Nick Name</label>
                     </div>
-                    <div class="col-md-8">
-                        <div class="col-md-12 nopadding">
+                    <div class="col-xs-7 col-sm-8">
+                        <div class="col-xs-12 nopadding">
                             <div class="nickname-view">
                                 <?php if($guest) : ?>
                                 <span id="nickname-restrict" class="danger">
@@ -142,7 +142,7 @@ $this->pageTitle=Yii::app()->name;
                 </div>
                 <span class="tooltip-custom tooltip-info yes hidden" id="nickname-info-save">Successfully saved!</span>
             </td>
-            <td class="col-md-1">
+            <td class="col-xs-4">
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
@@ -157,20 +157,20 @@ $this->pageTitle=Yii::app()->name;
             </td>
         </tr>
         <tr>
-            <td class="col-md-11">
+            <td class="col-xs-11">
                 <div class="w-100">
-                    <div class="col-md-4">
+                    <div class="col-xs-5 col-sm-4">
                         <label for="">MyLokal UserId</label>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-xs-7 col-sm-8">
                         <div class="userid-view">bala_balak</div>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-xs-12">
                     <span class="tooltip-custom tooltip-info hidden" id="mylokal-info-view"></span
                 </div>
             </td>
-            <td class="col-md-1">
+            <td class="col-xs-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <span class="fa fa-info-circle  show-actions" id="mylocal-info" title="Info"></span>
@@ -179,22 +179,22 @@ $this->pageTitle=Yii::app()->name;
             </td>
         </tr>
         <tr>
-            <td class="col-sm-11">
+            <td class="col-xs-11">
                 <div class="w-100">
-                    <div class="col-sm-2">
+                    <div class="col-xs-2 col-sm-2 all-width">
                         <label for="">Date of Birth</label>
                     </div>
-                    <div class="col-sm-8 col-sm-offset-2">
-                        <div class="birth-view">
-                            <div class="col-xs-6 nopadding" id="">
+                    <div class="col-xs-7 col-xs-offset-3 col-sm-8 col-sm-offset-2 no-offset">
+                        <div class="birth-view no-offset no-p-l">
+                            <div class="col-xs-4 nopadding" id="">
                                 <?php if($guest): ?>
-                                    <span id="b-month-1-restricted" class="danger">Restricted</span>
+                                    <span id="b-month-1-restricted" class="danger margin-left-min">Restricted</span>
                                 <?php else: ?>
-                                    <span id="b-month-1">July</span>
+                                    <span id="b-month-1" class="margin-left-min">July</span>
                                 <?php endif;?>
                                 <span style="color: #3b5998;" class="icons fa fa-lock" id="month-lock"></span>
                             </div>
-                            <div class="col-xs-3 nopadding">
+                            <div class="col-xs-2 nopadding">
                                 <span id="b-date-1">06</span>
                                 <span style="color: #3b5998;" class="icons fa fa-lock" id="day-lock"></span>
                             </div>
@@ -205,7 +205,7 @@ $this->pageTitle=Yii::app()->name;
                         </div>
                         <div class="birth-edit hidden">
                             <div class="row">
-                                <div class="col-sm-6 margin-select">
+                                <div class="col-xs-4 margin-select">
                                     <select class="form-control padding-select form-control-custom form-control-select" name="month" id="month">
                                         <option value>Month</option>
                                         <option value="1">January</option>
@@ -222,7 +222,7 @@ $this->pageTitle=Yii::app()->name;
                                         <option value="12">December</option>
                                     </select>
                                 </div>
-                                <div class="col-sm-3 margin-select day">
+                                <div class="col-xs-3 margin-select day">
                                     <select class="form-control form-control-custom form-control-select" name="day" id="day">
                                         <option value="">Day</option>
                                         <option value="1">01</option>
@@ -258,7 +258,7 @@ $this->pageTitle=Yii::app()->name;
                                         <option value="31">31</option>
                                     </select>
                                 </div>
-                                <div class="col-sm-3 pl-0 margin-select year">
+                                <div class="col-xs-3 pl-0 margin-select year">
                                     <select id="year" class="form-control form-control-custom form-control-select" name="year">
                                         <option value="">Year</option>
                                         <?php for($i = 2004; $i >= 1920; $i--): ?>
@@ -273,17 +273,19 @@ $this->pageTitle=Yii::app()->name;
                             <span class="danger hidden" id="dob-failed">Could not store date of birth. please try again.</span>
                         </div>
                     </div>
-                        <span class="confirmation hidden" id="b-name-change">Current changes not yet saved. Are you sure want to cancel this change?
+                    <div class="col-xs-12">
+                         <span class="confirmation hidden" id="b-name-change">Current changes not yet saved. Are you sure want to cancel this change?
                         <span class="yes" id="birthday-yes"><i class="fa fa-check"></i></span>
                         <span class="no" id="birthday-cancel-no"><i class="fa fa-close"></i></span>
-                    </span>
+                         </span>
+                    </div>
                 </div>
-                <div class="col-sm-12">
+                <div class="col-xs-12">
                     <span class="tooltip-custom tooltip-info hidden" id="birth-info-view"></span>
                     <span class="tooltip-custom tooltip-info yes hidden" id="birth-info-save">Successfully saved!</span>
                 </div>
             </td>
-            <td class="col-sm-1">
+            <td class="col-xs-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
@@ -297,12 +299,12 @@ $this->pageTitle=Yii::app()->name;
             </td>
         </tr>
         <tr>
-            <td class="col-md-11">
+            <td class="col-xs-11">
                 <div class="w-100">
-                    <div class="col-md-4">
+                    <div class="col-xs-5 col-sm-4">
                         <label for="">About Me</label>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-xs-7 col-sm-8">
                         <div class="aboutme-view">
                             <span id="aboutme-1">This is all about how great I am at this site.....</span>
                             <span class="icons fa fa-lock privacy_icon" id="aboutme-lock"></span>
@@ -329,12 +331,12 @@ $this->pageTitle=Yii::app()->name;
                         <span class="no" id="aboutme-cancel-no"><i class="fa fa-close"></i></span>
                     </span>
                 </div>
-                <div class="col-md-12">
+                <div class="col-xs-12">
                     <span class="tooltip-custom tooltip-info hidden" id="aboutme-info-view"></span>
                     <span class="tooltip-custom tooltip-info yes hidden" id="aboutme-info-save">Successfully saved!</span>
                 </div>
             </td>
-            <td class="col-md-1">
+            <td class="col-xs-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
@@ -348,12 +350,12 @@ $this->pageTitle=Yii::app()->name;
             </td>
         </tr>
         <tr>
-            <td class="col-md-11">
+            <td class="col-xs-11">
                 <div class="w-100">
-                    <div class="col-md-4">
+                    <div class="col-xs-5 col-sm-4">
                         <label>Relationship Status</label>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-xs-7 col-sm-8">
                         <div class="relation-view">
                             <?php if($guest): ?>
                                 <span id="relation-1-restricted" class="danger">Restricted</span>
@@ -390,7 +392,7 @@ $this->pageTitle=Yii::app()->name;
                     <span class="tooltip-custom tooltip-info yes hidden" id="relation-info-save">Successfully saved!</span>
                 </div>
             </td>
-            <td class="col-md-1">
+            <td class="col-xs-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
                         <?php if(!$guest): ?>
@@ -405,12 +407,12 @@ $this->pageTitle=Yii::app()->name;
             </td>
         </tr>
         <tr>
-            <td class="col-md-11">
+            <td class="col-xs-11">
                 <div class="w-100">
-                    <div class="col-md-4">
+                    <div class="col-xs-5 col-sm-4">
                         <label for="">Keywords</label>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-xs-7 col-sm-8">
                         <div class="keywords-view">
                             <?php if($guest): ?>
                                 <span id="keywords-restricted" class="danger">Restricted</span>
@@ -426,17 +428,13 @@ $this->pageTitle=Yii::app()->name;
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-xs-12">
                      <span class="tooltip-custom tooltip-info hidden" id="keywords-info-view">
                 </div>
             </td>
-            <td class="col-md-1">
+            <td class="col-xs-1">
                 <div class="icons icons-view">
                     <div class="action-icons">
-                        <?php /*if(!$guest): */?><!--
-                            <span class="fa fa-edit show-actions" id="keywords-edit" title="Edit"></span>
-                        --><?php /*endif; */?>
-<!--                        <span class="fa fa-close hidden " id="keywords-close" title="Cancel #90"></span>-->
                         <span class="fa fa-info-circle show-actions" id="keywords-info" title="Info"></span>
                     </div>
                 </div>

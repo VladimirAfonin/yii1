@@ -243,11 +243,15 @@ $('#firstname-edit, #firstname-1').on('click', function(e){
     // firstNameFlag = true;
     getCurrentData();
 
+    console.log(savedData);
+    console.log(currentData);
+
     var flag = false;
     var cancelId;
     if(firstNameFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            console.log('not ravno');
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;
@@ -255,6 +259,7 @@ $('#firstname-edit, #firstname-1').on('click', function(e){
         });
 
         if(flag) {
+            console.log('да есть флаг ');
             $('#' + cancelId).removeClass('hidden');
             return false;
         } else {
@@ -297,7 +302,7 @@ $('#middlename-edit, #middlename-1').on('click', function(e){
     var cancelId;
     if(firstNameFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;
@@ -332,7 +337,7 @@ $('#lastname-edit, #lastname-1').on('click', function(e){
     var cancelId;
     if(firstNameFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;
@@ -364,13 +369,17 @@ $('#nickname-edit, #nickname-1').on('click', function(e){
     // nickNameFlag = true;
     getCurrentData();
 
+    console.log(savedData);
+    console.log(currentData);
+
     var flag = false;
     var cancelId;
     var errorInput;
     var errorDiv;
     if(nickNameFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
+                console.log('not ravno');
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 errorInput = (Object.keys(currentData[index])[0]);
                 errorDiv = getErrorDiv(Object.keys(currentData[index])[0]);
@@ -380,6 +389,7 @@ $('#nickname-edit, #nickname-1').on('click', function(e){
         });
 
         if(flag) {
+            console.log('да есть флаг');
             $('#' + cancelId).removeClass('hidden');
             $(errorDiv).removeClass('hidden');
             $(errorInput).removeClass('hidden');
@@ -424,13 +434,17 @@ $('#relation-edit, #relation-1').on('click', function(e){
     // relationFlag = true;
     getCurrentData();
 
+    console.log(savedData);
+    console.log(currentData);
+
     var flag = false;
     var cancelId;
     var errorInput;
     var errorDiv;
     if(relationFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
+                console.log('not ravno');
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 errorInput = (Object.keys(currentData[index])[0]);
                 errorDiv = getErrorDiv(Object.keys(currentData[index])[0]);
@@ -440,6 +454,7 @@ $('#relation-edit, #relation-1').on('click', function(e){
         });
 
         if(flag) {
+            console.log('да есть флаг');
             $('#' + cancelId).removeClass('hidden');
             $(errorDiv).removeClass('hidden');
             $(errorInput).removeClass('hidden');
@@ -489,7 +504,7 @@ $('#birth-edit, #b-month-1, #b-date-1, #b-year-1 ').on('click', function(e){
     var errorDiv;
     if(birthFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 errorInput = (Object.keys(currentData[index])[0]);
                 errorDiv = getErrorDiv(Object.keys(currentData[index])[0]);
@@ -550,7 +565,7 @@ $('#aboutme-edit, #aboutme-1').on('click', function(e){
     var errorDiv;
     if(aboutmeFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 errorInput = (Object.keys(currentData[index])[0]);
                 errorDiv = getErrorDiv(Object.keys(currentData[index])[0]);
@@ -736,7 +751,7 @@ $('#nickname-trash').on('click', function(e){
     var cancelId;
     if(nickNameFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;
@@ -1003,7 +1018,7 @@ $('#relation-trash').on('click', function(e){
     var cancelId;
     if(relationFlag) {
         $.each(savedData, function(index, value) {
-            if(JSON.stringify(value) !== JSON.stringify(currentData[index])) {
+            if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
                 flag = true;
                 return false;

@@ -226,6 +226,14 @@ table#widget-table tr:hover span.show-actions {
     }
 }
 
+@media(max-width: 340px) {
+    .lastname {
+        white-space: nowrap;
+        /*text-overflow: ellipsis;*/
+    }
+}
+
+
 
 
 

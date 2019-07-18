@@ -50,10 +50,10 @@
             </div>
         </div>
         <div class="row equal">
-            <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs height_div" style="border: 1px solid gray">
+            <div class="col-lg-2 col-md-2 col-sm-1 hidden-xs hidden-sm height_div" style="border: 1px solid gray">
                 <span class="blocks">LEFT BLOCK</span>
             </div>
-            <div class="p-0 w-100 col-lg-6 col-md-6 col-sm-8 col-xs-12" style="border: 1px solid gray;">
+            <div class="p-0 w-100 col-lg-6 col-md-6 col-sm-10 col-xs-12" style="border: 1px solid gray;">
                <div class=" col-lg-12 col-xs-12 col-md-12 container-custom">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-block-height text-center no-line" style="border: 1px solid gray">
                         <span class="blocks" style="color: #000;">CENTER BLOCK</span>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs height_div" style="border: 1px solid gray">
+            <div class="col-lg-2 col-md-2 col-sm-1 hidden-xs hidden-sm height_div" style="border: 1px solid gray">
                 <span class="blocks">RIGHT BLOCK</span>
             </div>
         </div>

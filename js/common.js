@@ -1,14 +1,21 @@
 $('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();
 
-const API_URL_WIDGET = 'https://api.myshkinaradost.ru/';
-const API_URL = 'https://api.myshkinaradost.ru/'; // todo: change this line
+// const API_URL_WIDGET = 'https://api.myshkinaradost.ru/';
+// const API_URL = 'https://api.myshkinaradost.ru/'; // todo: change this line
 //
-// const API_URL = 'http://people.loc/';
-// const API_URL_WIDGET = 'http://people.loc/';
+const API_URL = 'http://people.loc/';
+const API_URL_WIDGET = 'http://people.loc/';
 
 function getShorty($string, $count_words) {
     var shorty = $string.split(" ", $count_words);
     return shorty.join(' ', shorty).concat('...');
+}
+function getShortySymbol($string, $count_symbols) {
+    var sliced = $string.slice(0, $count_symbols);
+    if((16 - sliced.length) >= 5) {
+        sliced += '..';
+    }
+    return sliced;
 }
 
 function content_length() {
@@ -128,7 +135,13 @@ if(widgetStatus) {
                 $('#middlename-1').html(res['middle_name']);
                 $('#middlename-input').val(res['middle_name']);
 
-                $('#lastname-1').html(res['last_name']);
+                if($(window).width() <= 440) {
+                    $('#lastname-1').html(getShortySymbol(res['last_name'], 5));
+                } else if($(window).width() <= 650) {
+                    $('#lastname-1').html(getShortySymbol(res['last_name'], 11));
+                } else {
+                    $('#lastname-1').html(res['last_name']);
+                }
                 $('#lastname-input').val(res['last_name']);
 
                 $('#nickname-1').html(res['nick_name']);
@@ -653,7 +666,15 @@ $('#firstname-save').on('click', function(e){
            firstNameFlag = true;
            $('#firstname-1').html(fname);
            $('#middlename-1').html(middleName);
-           $('#lastname-1').html(lastName);
+
+           if($(window).width() <= 440) {
+               $('#lastname-1').html(getShortySymbol(lastName, 5));
+           } else if($(window).width() <= 650) {
+               $('#lastname-1').html(getShortySymbol(lastName, 11));
+           } else {
+               $('#lastname-1').html(res['last_name']);
+           }
+
            $('#firstname-close').trigger('click');
            commitData();
            $('#f-name-change').addClass('hidden');

@@ -2,7 +2,7 @@ $('.fa-close, .fa-save, .fa-info-circle, .fa-trash, .fa-edit').tooltip();
 
 const API_URL_WIDGET = 'https://api.myshkinaradost.ru/';
 const API_URL = 'https://api.myshkinaradost.ru/'; // todo: change this line
-
+//
 // const API_URL = 'http://people.loc/';
 // const API_URL_WIDGET = 'http://people.loc/';
 
@@ -274,7 +274,7 @@ $('#firstname-edit, #firstname-1').on('click', function(e){
 
     var flag = false;
     var cancelId;
-    if(firstNameFlag) {
+    // if(firstNameFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -289,7 +289,7 @@ $('#firstname-edit, #firstname-1').on('click', function(e){
         } else {
             $('#f-name-change').addClass('hidden');
         }
-    }
+    // }
 
     // $('#f-name-change').addClass('hidden');
     $('.active').trigger('click');
@@ -303,7 +303,7 @@ $('#firstname-edit, #firstname-1').on('click', function(e){
         // $('#firstname-info-view').addClass('active-info').removeClass('hidden');
     }
 });
-var  firstNameFlag = true;
+// var  firstNameFlag = true;
 $('#firstname-close').on('click', function(e){
     $('#firstname-1, #middlename-1, #lastname-1, #firstname-lock, #middlename-lock, #lastname-lock').removeClass('hidden');
     $('#fname-input').val(savedData[0]['#fname-input']);
@@ -325,7 +325,7 @@ $('#middlename-edit, #middlename-1').on('click', function(e){
 
     var flag = false;
     var cancelId;
-    if(firstNameFlag) {
+    // if(firstNameFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -340,7 +340,7 @@ $('#middlename-edit, #middlename-1').on('click', function(e){
         } else {
             $('#f-name-change').addClass('hidden');
         }
-    }
+    // }
 
     $('.active').trigger('click');
     $('#firstname-close').addClass('active').css('opacity', 1);
@@ -360,7 +360,7 @@ $('#lastname-edit, #lastname-1').on('click', function(e){
 
     var flag = false;
     var cancelId;
-    if(firstNameFlag) {
+    // if(firstNameFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -375,7 +375,7 @@ $('#lastname-edit, #lastname-1').on('click', function(e){
         } else {
             $('#f-name-change').addClass('hidden');
         }
-    }
+    // }
 
     $('.active').trigger('click');
     $('#firstname-close').addClass('active').css('opacity', 1);
@@ -398,7 +398,8 @@ $('#nickname-edit, #nickname-1').on('click', function(e){
     var cancelId;
     var errorInput;
     var errorDiv;
-    if(nickNameFlag) {
+
+    // if(nickNameFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -419,7 +420,7 @@ $('#nickname-edit, #nickname-1').on('click', function(e){
             $(errorDiv).addClass('hidden');
             $(errorInput).addClass('hidden');
         }
-    }
+    // }
 
     if(!$('#nickname-info-view').hasClass('active-info')){
         $('#nickname-info').trigger('click');
@@ -434,7 +435,7 @@ $('#nickname-edit, #nickname-1').on('click', function(e){
     $('#nickname-trash, #nickname-close').css('opacity', 1);
 });
 
-var nickNameFlag = true;
+// var nickNameFlag = true;
 $('#nickname-close').on('click', function(e){
     $('#nickname-1, #nickname-lock').removeClass('hidden');
     $('#nickname-input').val(savedData[3]['#nickname-input']);
@@ -459,7 +460,8 @@ $('#relation-edit, #relation-1').on('click', function(e){
     var cancelId;
     var errorInput;
     var errorDiv;
-    if(relationFlag) {
+
+    // if(relationFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -480,7 +482,7 @@ $('#relation-edit, #relation-1').on('click', function(e){
             $(errorDiv).addClass('hidden');
             $(errorInput).addClass('hidden');
         }
-    }
+    // }
 
     if(!$('#relation-info-view').hasClass('active-info')){
         $('#relation-info').trigger('click');
@@ -494,7 +496,7 @@ $('#relation-edit, #relation-1').on('click', function(e){
     $('.relation-edit, #relation-save, #relation-close').removeClass('hidden');
     $('#relation-trash, #relation-close').css('opacity', 1);
 });
-var relationFlag = true;
+// var relationFlag = true;
 $('#relation-close').on('click', function(e){
     $('#relation-1, #relation-lock').removeClass('hidden');
     $('#relationStatus').val(savedData[8]['#relationStatus']);
@@ -518,7 +520,8 @@ $('#birth-edit, #b-month-1, #b-date-1, #b-year-1 ').on('click', function(e){
     var cancelId;
     var errorInput;
     var errorDiv;
-    if(birthFlag) {
+
+    // if(birthFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -539,7 +542,7 @@ $('#birth-edit, #b-month-1, #b-date-1, #b-year-1 ').on('click', function(e){
             $(errorDiv).addClass('hidden');
             $(errorInput).addClass('hidden');
         }
-    }
+    // }
 
     $('#b-month-1, #month-lock, #b-date-1, #day-lock, #b-year-1, #year-lock').addClass('hidden');
 
@@ -553,7 +556,7 @@ $('#birth-edit, #b-month-1, #b-date-1, #b-year-1 ').on('click', function(e){
     $('.birth-edit, #birth-save, #birth-close').removeClass('hidden');
 });
 
-var birthFlag = true;
+// var birthFlag = true;
 $('#birth-close').on('click', function(e){
     $('#month').val(savedData[4]['#month']);
     $('#day').val(savedData[6]['#day']);
@@ -580,7 +583,7 @@ $('#aboutme-edit, #aboutme-1').on('click', function(e){
     var cancelId;
     var errorInput;
     var errorDiv;
-    if(aboutmeFlag) {
+    // if(aboutmeFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -601,7 +604,7 @@ $('#aboutme-edit, #aboutme-1').on('click', function(e){
             $(errorDiv).addClass('hidden');
             $(errorInput).addClass('hidden');
         }
-    }
+    // }
 
     $('#aboutme-1, #aboutme-lock').addClass('hidden');
 
@@ -614,7 +617,7 @@ $('#aboutme-edit, #aboutme-1').on('click', function(e){
     $('#aboutme-info, #aboutme-edit').addClass('hidden');
     $('.aboutme-edit, #aboutme-save, #aboutme-close').removeClass('hidden');
 });
-var aboutmeFlag = true;
+// var aboutmeFlag = true;
 $('#aboutme-close').on('click', function(e){
     $('#aboutme-1, #aboutme-lock').removeClass('hidden');
     $('#aboutme-input').val(savedData[7]['#aboutme-input']);
@@ -693,7 +696,7 @@ $('#firstname-save').on('click', function(e){
        },
        success: function(res) {
            $('#firstname-1, #middlename-1, #lastname-1, #firstname-lock, #middlename-lock, #lastname-lock').removeClass('hidden');
-           firstNameFlag = true;
+           // firstNameFlag = true;
            $('#firstname-1').html(fname);
            $('#middlename-1').html(middleName);
            // $('#lastname-1').html(lastName);
@@ -752,7 +755,7 @@ $('#nickname-save').on('click', function(e){
             nick_name: nickName,
         },
         success: function(res) {
-            nickNameFlag = true;
+            // nickNameFlag = true;
             $('#nickname-input').val(nickName);
             $('#nickname-1').html(nickName);
             commitData();
@@ -786,7 +789,7 @@ $('#nickname-cancel-no').on('click', function(e){
     $('#nickname-1, #nickname-lock').removeClass('hidden');
     $('#nickname-input').val(savedData[3]['#nickname-input']);
     $('#n-name-change').addClass('hidden');
-    nickNameFlag = false;
+    // nickNameFlag = false;
     $('#nickname-close').trigger('click');
 });
 
@@ -796,7 +799,7 @@ $('#nickname-trash').on('click', function(e){
 
     var flag = false;
     var cancelId;
-    if(nickNameFlag) {
+    // if(nickNameFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -811,7 +814,7 @@ $('#nickname-trash').on('click', function(e){
         } else {
             $('#n-name-change').addClass('hidden');
         }
-    }
+    // }
 
     if (!confirm('Are you sure you want to delete Nick Name value?')) {
         return false;
@@ -825,7 +828,7 @@ $('#nickname-trash').on('click', function(e){
         },
         success: function(res) {
             $('#nickname-1, #nickname-lock').removeClass('hidden');
-            nickNameFlag = true;
+            // nickNameFlag = true;
             $('#nickname-input').val('');
             $('#nickname-1').html('');
             $('#n-name-change').addClass('hidden');
@@ -864,7 +867,7 @@ $('#firstname-cancel-no').on('click', function(e){
     $('#middlename-input').val(savedData[1]['#middlename-input']);
     $('#lastname-input').val(savedData[2]['#lastname-input']);
     $('#f-name-change').addClass('hidden');
-    firstNameFlag = false;
+    // firstNameFlag = false;
     $('#firstname-close').trigger('click');
 });
 
@@ -902,7 +905,7 @@ $('#birth-save').on('click', function(e){
             date_birth: newTimeStamp,
         },
         success: function(res) {
-            birthFlag = true;
+            // birthFlag = true;
             var months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
             $('#b-month-1').html(months[month - 1]);
@@ -941,7 +944,7 @@ $('#birthday-cancel-no').on('click', function(e){
     $('#day').val(savedData[6]['#day']);
     $('#year').val(savedData[5]['#year']);
     $('#b-name-change').addClass('hidden');
-    birthFlag = false;
+    // birthFlag = false;
     $('#birth-close').trigger('click');
 });
 
@@ -964,7 +967,7 @@ $('#aboutme-save').on('click', function(e){
             about_me: aboutMe,
         },
         success: function(res) {
-            aboutmeFlag = true;
+            // aboutmeFlag = true;
             $('#aboutme-1').html(getShorty(aboutMe, 5));
             commitData();
             $('#aboutme-close').trigger('click');
@@ -997,7 +1000,7 @@ $('#aboutme-cancel-no').on('click', function(e){
     $('#aboutme-1, #aboutme-lock').removeClass('hidden');
     $('#aboutme-input').val(savedData[7]['#aboutme-input']);
     $('#aboutme-name-change').addClass('hidden');
-    aboutmeFlag = false;
+    // aboutmeFlag = false;
     $('#aboutme-close').trigger('click');
 });
 
@@ -1026,7 +1029,7 @@ $('#relation-save').on('click', function(e){
             relation_status: relationStatus,
         },
         success: function(res) {
-            relationFlag = true;
+            // relationFlag = true;
             $('#relation-1').html(relations[relationStatus]['label']);
             commitData();
             $('#relation-close').trigger('click');
@@ -1057,7 +1060,7 @@ $('#relation-cancel-no').on('click', function(e){
     $('#relation-1, #relation-lock').removeClass('hidden');
     $('#relationStatus').val(savedData[8]['#relationStatus']);
     $('#relation-name-change').addClass('hidden');
-    relationFlag = false;
+    // relationFlag = false;
     $('#relation-close').trigger('click');
 });
 
@@ -1067,7 +1070,7 @@ $('#relation-trash').on('click', function(e){
 
     var flag = false;
     var cancelId;
-    if(relationFlag) {
+    // if(relationFlag) {
         $.each(savedData, function(index, value) {
             if(JSON.stringify(value) != JSON.stringify(currentData[index])) {
                 cancelId = getCancelRow(Object.keys(currentData[index])[0]);
@@ -1082,7 +1085,7 @@ $('#relation-trash').on('click', function(e){
         } else {
             $('#relation-name-change').addClass('hidden');
         }
-    }
+    // }
 
     if (!confirm('Are you sure you want to delete Relation Status value?')) {
         return false;
@@ -1096,7 +1099,7 @@ $('#relation-trash').on('click', function(e){
         },
         success: function(res) {
             $('#relation-1, #relation-lock').removeClass('hidden');
-            relationFlag = true;
+            // relationFlag = true;
             $('#relation-1').html('---');
             $('#relationStatus').val(316);
             commitData();

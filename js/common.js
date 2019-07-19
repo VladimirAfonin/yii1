@@ -10,6 +10,7 @@ function getShorty($string, $count_words) {
     var shorty = $string.split(" ", $count_words);
     return shorty.join(' ', shorty).concat('...');
 }
+
 function getShortySymbol($string, $count_symbols) {
     if($string.length > $count_symbols) {
         var sliced = $string.slice(0, $count_symbols - 2);
@@ -129,6 +130,16 @@ if(widgetStatus) {
         success: function(res) {
             if(res) {
                 var user = res;
+
+                // errors
+                $('#f-name-error').html(res['first_name_error']);
+                $('#m-name-error').html(res['middle_name_error']);
+                $('#l-name-error').html(res['last_name_error']);
+                $('#n-name-error').html(res['nick_name_error']);
+                $('#dob-error').html(res['birth_incorrect_error']);
+                $('#dob-young').html(res['birth_young_error']);
+                $('#aboutme-empty-error').html(res['aboutme_error']);
+                $('#aboutme-error').html(res['aboutme_charact_error']);
 
                 $('#firstname-1').html(res['first_name']);
                 $('#fname-input').val(res['first_name']);
@@ -304,6 +315,7 @@ $('#firstname-close').on('click', function(e){
     $('.firstname-edit, .middle-edit, .lastname-edit, #firstname-close, #firstname-save').addClass('hidden');
     $('#firstname-edit, #middlename-edit, #lastname-edit, #firstname-info').removeClass('hidden');
     $('#firstname-trash').css('opacity', 0);
+    $('#f-name-error, #m-name-error, #l-name-error').addClass('hidden');
 });
 
 // middlename
@@ -434,6 +446,7 @@ $('#nickname-close').on('click', function(e){
     $('.nickname-edit, #nickname-close, #nickname-save').addClass('hidden');
     $('#nickname-edit, #nickname-info').removeClass('hidden');
     $('#nickname-trash').css('opacity', 0);
+    $('#n-name-error').addClass('hidden');
 });
 
 // relation status
@@ -554,6 +567,7 @@ $('#birth-close').on('click', function(e){
     $('#birth-close').removeClass('active');
     $('.birth-edit, #birth-close, #birth-save').addClass('hidden');
     $('#birth-edit, #birth-info').removeClass('hidden');
+    $('#dob-error, #dob-young').addClass('hidden');
 });
 
 // about me
@@ -611,6 +625,7 @@ $('#aboutme-close').on('click', function(e){
     $('#aboutme-close').removeClass('active');
     $('.aboutme-edit, #aboutme-close, #aboutme-save').addClass('hidden');
     $('#aboutme-edit, #aboutme-info').removeClass('hidden');
+    $('#aboutme-empty-error, #aboutme-error').addClass('hidden');
 });
 
 // keywords
@@ -765,6 +780,7 @@ $('#nickname-yes').on('click', function(e){
     $('.nickname-edit, #nickname-close, #nickname-save').addClass('hidden');
     $('#nickname-edit, #nickname-info').removeClass('hidden');
     $('#nickname-trash').css('opacity', 0);
+    $('#n-name-error').addClass('hidden');
 });
 $('#nickname-cancel-no').on('click', function(e){
     $('#nickname-1, #nickname-lock').removeClass('hidden');
@@ -819,6 +835,7 @@ $('#nickname-trash').on('click', function(e){
             $('#nickname-trash').css('opacity', 0);
             commitData();
             $('#nickname-info-view').addClass('hidden').removeClass('active-info');
+            $('#n-name-error').addClass('hidden');
         },
         error: function(res) {
             console.log(res);
@@ -839,6 +856,7 @@ $('#firstname-yes').on('click', function(e){
     $('.firstname-edit, .middle-edit, .lastname-edit, #firstname-close, #firstname-save').addClass('hidden');
     $('#firstname-edit, #middlename-edit, #lastname-edit, #firstname-info').removeClass('hidden');
     $('#firstname-trash').css('opacity', 0);
+    $('#f-name-error, #m-name-error, #l-name-error').addClass('hidden');
 });
 $('#firstname-cancel-no').on('click', function(e){
     $('#firstname-1, #middlename-1, #lastname-1, #firstname-lock, #middlename-lock, #lastname-lock').removeClass('hidden');
@@ -916,6 +934,7 @@ $('#birthday-yes').on('click', function(e) {
     $('#birth-close').removeClass('active');
     $('.birth-edit, #birth-close, #birth-save').addClass('hidden');
     $('#birth-edit, #birth-info').removeClass('hidden');
+    $('#dob-error, #dob-young').addClass('hidden');
 });
 $('#birthday-cancel-no').on('click', function(e){
     $('#month').val(savedData[4]['#month']);
@@ -972,6 +991,7 @@ $('#aboutme-yes').on('click', function(e){
     $('#aboutme-close').removeClass('active');
     $('.aboutme-edit, #aboutme-close, #aboutme-save').addClass('hidden');
     $('#aboutme-edit, #aboutme-info').removeClass('hidden');
+    $('#aboutme-empty-error, #aboutme-error').addClass('hidden');
 });
 $('#aboutme-cancel-no').on('click', function(e){
     $('#aboutme-1, #aboutme-lock').removeClass('hidden');

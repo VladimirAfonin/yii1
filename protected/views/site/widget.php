@@ -30,7 +30,7 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                             <div class="firstname-edit hidden">
                                 <input class="form-control form-control-custom required" id="fname-input" maxlength="25" placeholder="first name" type="text" value="">
-                                <span class="danger hidden" id="f-name-error">First Name cannot be left blank</span>
+                                <span class="danger hidden" id="f-name-error"></span>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ $this->pageTitle=Yii::app()->name;
                                     </div>
                                     <div class="middle-edit hidden">
                                         <input class="form-control form-control-custom required" id="middlename-input" maxlength="25" placeholder="middle name" type="text" value="">
-                                        <span class="danger hidden" id="m-name-error">Middle Name cannot be left blank</span>
+                                        <span class="danger hidden" id="m-name-error"></span>
                                     </div>
                                 </div>
                             </div>
@@ -78,8 +78,8 @@ $this->pageTitle=Yii::app()->name;
                                     </div>
                                     <div class="lastname-edit hidden">
                                         <input class="form-control form-control-custom required" id="lastname-input" maxlength="25" placeholder="last name" type="text" value="Bala kumar.">
-                                        <span class="danger hidden" id="l-name-error">Last Name cannot be left blank</span>
-                                        <span class="danger hidden" id="l-name-error-size">Maximum 9 characters are allowed</span>
+                                        <span class="danger hidden" id="l-name-error"></span>
+<!--                                        <span class="danger hidden" id="l-name-error-size">Maximum 9 characters are allowed</span>-->
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@ $this->pageTitle=Yii::app()->name;
                             </div>
                             <div class="nickname-edit hidden">
                                 <input class="form-control form-control-custom required" id="nickname-input" maxlength="25" placeholder="nick name" type="text" value="">
-                                 <span class="danger hidden" id="n-name-error">First Name cannot be left blank</span>
+                                 <span class="danger hidden" id="n-name-error"></span>
                             </div>
                         </div>
                     </div>
@@ -269,9 +269,9 @@ $this->pageTitle=Yii::app()->name;
                                 </div>
                             </div>
                             <span class="danger hidden" id="dob-error">Please choose the complete date as a your birthday</span>
-                            <span class="danger hidden" id="dob-wrong">It look like you have entered the wrong info. Please make sure that you use real date of birth.</span>
+<!--                            <span class="danger hidden" id="dob-wrong">It look like you have entered the wrong info. Please make sure that you use real date of birth.</span>-->
                             <span class="danger hidden" id="dob-young">We are in process of developing this platform for younger people like you but are not ready currently. We regret inconvenience.</span>
-                            <span class="danger hidden" id="dob-failed">Could not store date of birth. please try again.</span>
+<!--                            <span class="danger hidden" id="dob-failed">Could not store date of birth. please try again.</span>-->
                         </div>
                     </div>
                     <div class="col-xs-12">
@@ -322,8 +322,8 @@ $this->pageTitle=Yii::app()->name;
                             <span class="aboutme-limit">
                                 <span id="chars-sum"></span>
                                 <span id="remaining-txt">characters remaining</span>
-                                <span id="aboutme-error" class="danger hidden">Maximum 200 symbols are allowed</span>
-                                <span class="danger hidden" id="aboutme-empty-error">About me cannot be left blank</span>
+                                <span id="aboutme-error" class="danger hidden"></span>
+                                <span class="danger hidden" id="aboutme-empty-error"></span>
                             </span>
                         </div>
                     </div>

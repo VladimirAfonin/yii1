@@ -153,6 +153,8 @@ if(widgetStatus) {
                     $('#lastname-1').html(getShortySymbol(res['last_name'], 6));
                 } else if($(window).width() <= 650) {
                     $('#lastname-1').html(getShortySymbol(res['last_name'], 11));
+                } else if($(window).width() >= 1400) {
+                    $('#lastname-1').html(getShortySymbol(res['last_name'], 23));
                 } else if($(window).width() >= 651) {
                     $('#lastname-1').html(getShortySymbol(res['last_name'], 13));
                 } else {
@@ -707,6 +709,8 @@ $('#firstname-save').on('click', function(e){
                $('#lastname-1').html(getShortySymbol(lastName, 6));
            } else if($(window).width() <= 650) {
                $('#lastname-1').html(getShortySymbol(lastName, 11));
+           } else if($(window).width() >= 1400) {
+               $('#lastname-1').html(getShortySymbol(res['last_name'], 23));
            } else if($(window).width() >= 651) {
                $('#lastname-1').html(getShortySymbol(lastName, 13));
            } else {
